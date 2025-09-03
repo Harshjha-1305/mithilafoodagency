@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <title>Mithila Food Agency - Pag Pag Makhana Aa Mach</title>
+    <title>🪷 Mithila Food Agency - Pag Pag Makhana Aa Mach - Authentic Fox Nuts from Bihar</title>
     <meta name="description" content="Discover Mithila Food Agency's authentic, hand-harvested makhana (fox nuts) from Bihar. Pag Pag Makhana Aa Mach - A healthy, gluten-free, and protein-rich snack inspired by Maithili culture.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -36,14 +35,6 @@
             color: var(--text-dark);
             background: var(--gradient-bg);
             overflow-x: hidden;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        /* Main Content Wrapper for footer to stay at bottom */
-        .page-wrapper {
-            flex: 1;
         }
 
         /* Header Styles */
@@ -75,7 +66,6 @@
         .logo-icon {
             width: 50px;
             height: 50px;
-            background: var(--primary-red);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -83,19 +73,73 @@
             font-size: 24px;
             color: white;
             border: 3px solid var(--primary-yellow);
+            background-image: url('https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50');
+            background-size: cover;
+            background-position: center;
+            background-color: var(--primary-red);
         }
+
         .logo-text {
             color: var(--primary-red);
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             font-size: 1.5rem;
         }
+
         .logo-tagline {
             color: var(--primary-orange);
             font-size: 0.8rem;
             font-style: italic;
             margin-left: 0.5rem;
             font-weight: 500;
+        }
+
+        /* Image Styling for Future Use */
+        .product-image img,
+        .story-image img,
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .product-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(211,47,47,0.7), rgba(255,112,67,0.7));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container:hover .image-overlay {
+            opacity: 1;
         }
 
         .nav-menu {
@@ -376,6 +420,7 @@
         .story-image {
             width: 100%;
             height: 250px;
+            background-image: url('https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -387,7 +432,6 @@
             overflow: hidden;
         }
 
-        /* Background images for stories */
         .story-image.makhana-bowl {
             background-image: url('https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3');
         }
@@ -458,7 +502,7 @@
         /* Product Cards */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
             margin-top: 4rem;
         }
@@ -466,7 +510,7 @@
         .product-card {
             background: white;
             border-radius: 25px;
-            padding: 2rem;
+            padding: 2.5rem;
             text-align: center;
             box-shadow: var(--shadow);
             transition: all 0.4s ease;
@@ -498,35 +542,31 @@
         }
 
         .product-image {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             background: var(--gradient-bg);
             border-radius: 50%;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
             color: var(--primary-orange);
             border: 5px solid var(--primary-yellow);
+            background-image: url('https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3');
             background-size: cover;
             background-position: center;
-            position: relative;
         }
-        .product-image-placeholder {
-            font-size: 3rem;
-            color: var(--primary-orange);
-        }
-        
+
         .product-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.6rem;
             color: var(--text-dark);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .product-price {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--accent-green);
             margin-bottom: 1.5rem;
@@ -646,7 +686,6 @@
             color: white;
             text-align: center;
             padding: 4rem 2rem 2rem;
-            margin-top: auto;
         }
 
         .footer-content {
@@ -723,16 +762,6 @@
             transform: scale(1.1);
             background: var(--primary-orange);
         }
-        
-        /* Floating Call Button */
-        .call-btn {
-            background-color: #25D366; /* WhatsApp green */
-        }
-        
-        .call-btn:hover {
-            background-color: #128C7E;
-        }
-
 
         /* Current Page Indicator */
         .current-page {
@@ -742,67 +771,14 @@
         .current-page.show {
             display: block;
         }
-        
-        /* Order Page Specific Styles */
-        .order-summary {
-            background: var(--cream);
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border: 2px solid var(--primary-yellow);
-        }
 
-        .order-total {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary-red);
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 2px solid var(--primary-orange);
-        }
-        .order-form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        /* Product Image and description grid */
-        .flavour-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-        .flavour-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-        .flavour-image {
-            width: 100%;
-            height: 200px;
-            background: #f0f0f0;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ccc;
-            font-size: 1.2rem;
-        }
-
-        /* Article content for blog/about pages */
+        /* Article Style Content */
         .article-content {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
         }
-        
+
         .article-content h3 {
             font-family: 'Playfair Display', serif;
             color: var(--primary-red);
@@ -832,7 +808,28 @@
             font-size: 1.4rem;
             margin-bottom: 1rem;
         }
-        
+
+        /* Order Summary */
+        .order-summary {
+            background: var(--cream);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid var(--primary-yellow);
+        }
+
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--primary-orange);
+        }
+
         /* Mobile Styles */
         @media (max-width: 768px) {
             .nav-menu {
@@ -862,6 +859,7 @@
             .logo-text {
                 font-size: 1.2rem;
             }
+
             .logo-tagline {
                 font-size: 0.7rem;
             }
@@ -884,7 +882,7 @@
             .section {
                 padding: 4rem 1rem;
             }
-            
+
             .story-grid,
             .products-grid {
                 grid-template-columns: 1fr;
@@ -953,10 +951,15 @@
         .fade-in {
             animation: fadeInUp 0.6s ease-out;
         }
+
+        .order-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
     </style>
 </head>
 <body>
-    <div class="page-wrapper">
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
@@ -969,9 +972,9 @@
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-                <li><a href="#" class="nav-link" data-page="order">Order</a></li>
                 <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
                 <li><a href="#" class="nav-link" data-page="blog">Blog & Recipes</a></li>
+                <li><a href="#" class="nav-link" data-page="order">Order Now</a></li>
                 <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -998,7 +1001,7 @@
             </div>
         </section>
 
-        <!-- Why Nutritionists Recommend Section -->
+        <!-- Enhanced Why Makhana Section -->
         <section class="section" id="why-makhana">
             <div class="container">
                 <div class="why-section fade-in">
@@ -1021,6 +1024,7 @@
                         <h3>The Mithila Difference: Why Our Makhana Stands Apart</h3>
                         <p>Our makhana comes exclusively from the traditional farming communities of Mithila, where the art of cultivation has been passed down through 15+ generations. The unique soil composition and pristine water quality of this region produce makhana with superior taste, texture, and nutritional density.</p>
                     </div>
+
                     <div class="benefits-grid">
                         <div class="benefit-card fade-in">
                             <div class="benefit-icon">
@@ -1050,64 +1054,116 @@
                             <h3 class="benefit-title">Rich in Antioxidants</h3>
                             <p class="benefit-subtitle">Flavonoids & polyphenols for immune support</p>
                         </div>
+                        <div class="benefit-card fade-in">
+                            <div class="benefit-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3 class="benefit-title">100% Natural</h3>
+                            <p class="benefit-subtitle">No preservatives, chemicals, or artificial additives</p>
+                        </div>
+                        <div class="benefit-card fade-in">
+                            <div class="benefit-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3 class="benefit-title">Weight Management</h3>
+                            <p class="benefit-subtitle">High fiber, low fat - keeps you satisfied longer</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Product Cards -->
+
+        <!-- Comparison Section -->
+        <section class="section" id="comparison">
+            <div class="container">
+                <div class="comparison-section fade-in">
+                    <div class="section-header">
+                        <h2 class="section-title">How Mithila Fox Nuts Compare</h2>
+                        <p class="section-subtitle">See why makhana is the smarter choice for your health</p>
+                    </div>
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nutrient (per 100g)</th>
+                                    <th class="highlight">Fox Nuts (Makhana)</th>
+                                    <th>Potato Chips</th>
+                                    <th>Almonds</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Calories</td>
+                                    <td class="highlight">347 kcal</td>
+                                    <td>536 kcal</td>
+                                    <td>579 kcal</td>
+                                </tr>
+                                <tr>
+                                    <td>Protein</td>
+                                    <td class="highlight">9.7g</td>
+                                    <td>7g</td>
+                                    <td>21g</td>
+                                </tr>
+                                <tr>
+                                    <td>Fat</td>
+                                    <td class="highlight">0.1g</td>
+                                    <td>37g</td>
+                                    <td>50g</td>
+                                </tr>
+                                <tr>
+                                    <td>Cholesterol</td>
+                                    <td class="highlight">0mg</td>
+                                    <td>11mg</td>
+                                    <td>0mg</td>
+                                </tr>
+                                <tr>
+                                    <td>Fiber</td>
+                                    <td class="highlight">14.5g</td>
+                                    <td>4.8g</td>
+                                    <td>12.5g</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Single Premium Product Section -->
         <section class="section" id="products" style="background: white;">
             <div class="container">
                 <div class="section-header fade-in">
                     <span class="section-badge">Premium Collection</span>
-                    <h2 class="section-title">Flavors of Mithila</h2>
+                    <h2 class="section-title">Our Signature Makhana</h2>
                     <p class="section-subtitle">Handcrafted with love by traditional farmers of Mithila, each pack tells a story of generations of expertise and dedication to quality.</p>
                 </div>
-                <div class="flavour-grid">
-                    <div class="flavour-card fade-in">
-                        <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
+                <div style="display: flex; justify-content: center;">
+                    <div class="product-card fade-in" style="max-width: 500px; margin: 0 auto;">
+                        <div class="product-image">
+                            <span style="position: relative; z-index: 2;">🥜</span>
                         </div>
-                        <h3 class="product-title">Chat Masala</h3>
-                        <p class="product-description">A tangy and spicy blend of traditional chat masala to give you an authentic street food experience. Perfect for a savory treat.</p>
-                        <p class="product-price">Price: ₹XXX</p>
-                    </div>
-                    <div class="flavour-card fade-in">
-                        <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
+                        <h3 class="product-title">Premium Himalayan Salt Makhana</h3>
+                        <p class="product-price">₹299 / 250g</p>
+                        <div style="margin: 2rem 0; text-align: left;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 1rem; font-size: 1.1rem;">✨ What Makes It Special:</h4>
+                            <ul style="list-style: none; padding: 0; space-y: 0.5rem;">
+                                <li style="margin-bottom: 0.5rem;">🌿 Hand-picked from pristine Mithila ponds</li>
+                                <li style="margin-bottom: 0.5rem;">🧂 Enhanced with pure Himalayan pink salt</li>
+                                <li style="margin-bottom: 0.5rem;">🔥 Traditionally roasted for perfect crunch</li>
+                                <li style="margin-bottom: 0.5rem;">📦 Fresh batch delivered within 3-5 days</li>
+                                <li style="margin-bottom: 0.5rem;">💪 9.7g protein per 100g serving</li>
+                                <li>❤️ Zero cholesterol, zero guilt</li>
+                            </ul>
                         </div>
-                        <h3 class="product-title">Pudina Lemon</h3>
-                        <p class="product-description">A refreshing and zesty flavor with the coolness of mint and the tanginess of lemon. Ideal for a light, summery snack.</p>
-                        <p class="product-price">Price: ₹XXX</p>
-                    </div>
-                    <div class="flavour-card fade-in">
-                        <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
+                        <p class="product-description">The pure essence of makhana enhanced with a whisper of ancient Himalayan pink salt. Perfect for mindful snacking during work breaks, movie nights, or peaceful evening moments. Each kernel delivers a satisfying crunch with deep, nutty flavors that keep you coming back for more.</p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://wa.me/9930315235?text=Hi! I'm interested in ordering Premium Himalayan Salt Makhana (₹299/250g). Could you share more details about availability and delivery?" class="btn btn-secondary" style="flex: 1; min-width: 200px;">
+                                <i class="fab fa-whatsapp"></i> Quick Order on WhatsApp
+                            </a>
+                            <button class="btn btn-primary" onclick="showOrderPage()" style="flex: 1; min-width: 200px;">
+                                <i class="fas fa-shopping-cart"></i> Order Now
+                            </button>
                         </div>
-                        <h3 class="product-title">Salt and Pepper</h3>
-                        <p class="product-description">A timeless classic with the perfect balance of savory salt and a kick of fresh black pepper. Simple, yet satisfying.</p>
-                        <p class="product-price">Price: ₹XXX</p>
-                    </div>
-                    <div class="flavour-card fade-in">
-                        <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
-                        </div>
-                        <h3 class="product-title">Cocktail Chakna</h3>
-                        <p class="product-description">A crunchy and flavorful mix designed to complement your favorite beverages. A party-in-a-pack for any gathering.</p>
-                        <p class="product-price">Price: ₹XXX</p>
-                    </div>
-                    <div class="flavour-card fade-in">
-                        <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
-                        </div>
-                        <h3 class="product-title">Peri Peri</h3>
-                        <p class="product-description">For the spice lovers! A fiery and bold Peri Peri flavor that will tantalize your taste buds. An addictive snack with a spicy kick.</p>
-                        <p class="product-price">Price: ₹XXX</p>
                     </div>
                 </div>
             </div>
@@ -1143,58 +1199,647 @@
                 </div>
             </div>
         </section>
+
+        <!-- The Makhana Journey -->
+        <section class="section" id="journey">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-badge">Your Solutions</span>
+                    <h2 class="section-title">Practical Answers to Your Wellness Challenges</h2>
+                    <p class="section-subtitle">Each story addresses a specific problem with actionable solutions that have helped thousands transform their relationship with healthy snacking.</p>
+                </div>
+                <div class="story-grid">
+                    <div class="story-card fade-in">
+                        <div class="story-image makhana-bowl"></div>
+                        <div class="story-content">
+                            <span class="story-badge">5 min read</span>
+                            <h3 class="story-title">7 Proven Health Benefits of Makhana Backed by Science</h3>
+                            <p class="story-text">Struggling with finding healthy snacks that don't taste like cardboard? Discover how makhana can transform your snacking habits with its incredible nutrient profile and satisfying crunch that keeps you coming back for more.</p>
+                            <a href="https://www.ndtv.com/health/9-reasons-why-makhana-is-the-perfect-snack-6963625" target="_blank" class="read-more">
+                                Read Solution <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="story-card fade-in">
+                        <div class="story-image makhana-plant"></div>
+                        <div class="story-content">
+                            <span class="story-badge">5 min read</span>
+                            <h3 class="story-title">Makhana vs Regular Nuts: Cost & Nutrition Showdown</h3>
+                            <p class="story-text">Worried about balancing nutrition and budget? Discover how makhana offers better nutritional value at a fraction of the cost, making healthy eating accessible without breaking the bank or compromising on taste.</p>
+                            <a href="https://www.makhana.com/about-makhana" target="_blank" class="read-more">
+                                Read Solution <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="story-card fade-in">
+                        <div class="story-image makhana-kheer"></div>
+                        <div class="story-content">
+                            <span class="story-badge">7 min read</span>
+                            <h3 class="story-title">Traditional Makhana Recipes for Modern Kitchens</h3>
+                            <p class="story-text">Tired of eating the same snacks every day? Explore creative ways to incorporate makhana into your daily meals, from traditional kheer to modern fusion recipes that will revolutionize your kitchen adventures.</p>
+                            <a href="https://blog.cookpad.com/in/makhana-recipes-for-fasting/" target="_blank" class="read-more">
+                                Read Solution                                 <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    
+
+    <!-- Contact Page -->
+    <div class="current-page" id="contact">
+        <section class="section" style="padding-top: 8rem;">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-badge">Get in Touch</span>
+                    <h2 class="section-title">Let's Connect!</h2>
+                    <p class="section-subtitle">We'd love to hear from you. Get in touch for orders, questions, partnerships, or just to share your makhana stories with us.</p>
+                </div>
+                <div class="contact-form fade-in">
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us how we can help you, share your feedback, or ask any questions..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="story-grid">
+                    <div class="story-card fade-in">
+                        <div class="story-image">
+                            <i class="fas fa-envelope" style="font-size: 5rem; color: white;"></i>
+                        </div>
+                        <div class="story-content">
+                            <span class="story-badge">Email Us</span>
+                            <h3 class="story-title">Direct Communication</h3>
+                            <p class="story-text">
+                                <strong>General Inquiries:</strong><br>
+                                <a href="mailto:jhaharsh2004@gmail.com" style="color: var(--primary-red); text-decoration: none;">jhaharsh2004@gmail.com</a><br><br>
+                                <strong>Orders & Support:</strong><br>
+                                <a href="mailto:jhaharsh2004@gmail.com" style="color: var(--primary-red); text-decoration: none;">jhaharsh2004@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="story-card fade-in">
+                        <div class="story-image">
+                            <i class="fas fa-phone" style="font-size: 5rem; color: white;"></i>
+                        </div>
+                        <div class="story-content">
+                            <span class="story-badge">Call or WhatsApp</span>
+                            <h3 class="story-title">Instant Support</h3>
+                            <p class="story-text">
+                                <strong>Phone:</strong><br>
+                                <a href="tel:+919930315235" style="color: var(--primary-red); text-decoration: none;">+91 9930315235</a><br><br>
+                                <strong>WhatsApp:</strong><br>
+                                <a href="https://wa.me/9930315235" style="color: var(--primary-red); text-decoration: none;">+91 9930315235</a><br><br>
+                                <em>Available: Mon-Sat, 9 AM - 7 PM IST</em>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="story-card fade-in">
+                        <div class="story-image">
+                            <i class="fas fa-map-marker-alt" style="font-size: 5rem; color: white;"></i>
+                        </div>
+                        <div class="story-content">
+                            <span class="story-badge">Visit Us</span>
+                            <h3 class="story-title">Our Address</h3>
+                            <p class="story-text">
+                                <strong>Mithila Food Agency</strong><br>
+                                Village: Parsauni<br>
+                                Block: Sakri<br>
+                                Muzaffarpur, Bihar - 843113<br>
+                                India<br><br>
+                                <em>Visit our processing facility and meet our team!</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🪷 Mithila Food Agency</div>
+            <p>Pag Pag Makhana Aa Mach • Authentic Makhana from the Heart of Bihar • Preserving Tradition, Delivering Wellness</p>
+            <div class="footer-social">
+                <a href="https://wa.me/9930315235" class="social-link" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:jhaharsh2004@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+919930315235" class="social-link" title="Phone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="#" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem;">
+                © 2025 Mithila Food Agency. All rights reserved.<br>
+                Made with ❤️ in Bihar • Trusted by families across India
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating Navigation -->
+    <div class="page-nav">
+        <div class="nav-buttons">
+            <button class="nav-btn" onclick="scrollToTop()" title="Go to Top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <button class="nav-btn" onclick="openWhatsApp()" title="WhatsApp Us">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Page navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('.current-page');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetPage = link.getAttribute('data-page');
+                
+                // Update active nav link
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                // Show target page
+                pages.forEach(page => {
+                    page.classList.remove('show');
+                    if (page.id === targetPage) {
+                        page.classList.add('show');
+                    }
+                });
+
+                // Close mobile menu if open
+                navMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+
+                // Scroll to top
+                scrollToTop();
+            });
+        });
+
+        // Show Order Page Function
+        function showOrderPage() {
+            // Update nav
+            navLinks.forEach(l => l.classList.remove('active'));
+            document.querySelector('.nav-link[data-page="order"]').classList.add('active');
+            
+            // Show order page
+            pages.forEach(page => page.classList.remove('show'));
+            document.getElementById('order').classList.add('show');
+            
+            scrollToTop();
+        }
+
+        // Order quantity calculator
+        const quantitySelect = document.getElementById('orderQuantity');
+        const quantityDisplay = document.getElementById('orderQuantityDisplay');
+        const subtotalDisplay = document.getElementById('orderSubtotal');
+        const deliveryDisplay = document.getElementById('deliveryCharges');
+        const totalDisplay = document.getElementById('orderTotal');
+
+        if (quantitySelect) {
+            quantitySelect.addEventListener('change', function() {
+                const quantity = parseInt(this.value) || 0;
+                const pricePerPack = 299;
+                const subtotal = quantity * pricePerPack;
+                let deliveryCharge = 50;
+                
+                // Free delivery for orders above 500
+                if (subtotal >= 500) {
+                    deliveryCharge = 0;
+                }
+                
+                const total = subtotal + deliveryCharge;
+                
+                quantityDisplay.textContent = quantity + ' pack(s)';
+                subtotalDisplay.textContent = '₹' + subtotal;
+                deliveryDisplay.textContent = deliveryCharge === 0 ? 'FREE' : '₹' + deliveryCharge;
+                totalDisplay.textContent = '₹' + total;
+            });
+        }
+
+        // Order form submission
+        const orderForm = document.getElementById('orderForm');
+        if (orderForm) {
+            orderForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(orderForm);
+                const data = Object.fromEntries(formData);
+                
+                // Calculate totals
+                const quantity = parseInt(data.quantity) || 0;
+                const subtotal = quantity * 299;
+                const delivery = subtotal >= 500 ? 0 : 50;
+                const total = subtotal + delivery;
+                
+                // Create email content
+                const subject = `New Makhana Order - ${data.name}`;
+                const body = `
+🛒 NEW ORDER RECEIVED!
+
+CUSTOMER DETAILS:
+📋 Name: ${data.name}
+📞 Phone: ${data.phone}
+📧 Email: ${data.email}
+
+ORDER DETAILS:
+🥜 Product: Premium Himalayan Salt Makhana
+📦 Quantity: ${quantity} pack(s)
+💰 Subtotal: ₹${subtotal}
+🚚 Delivery: ${delivery === 0 ? 'FREE' : '₹' + delivery}
+💳 Total Amount: ₹${total}
+
+DELIVERY ADDRESS:
+📍 ${data.address}
+
+SPECIAL INSTRUCTIONS:
+${data.notes || 'None'}
+
+Please confirm this order by calling the customer within 2 hours.
+
+---
+Order placed through: Mithila Food Agency Website
+Time: ${new Date().toLocaleString('en-IN')}
+                `.trim();
+
+                // Create mailto link
+                const mailtoLink = `mailto:jhaharsh2004@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                alert('🎉 Order Placed Successfully!\n\nYour order details have been sent to our team. We will call you within 2 hours to confirm your order.\n\nOrder Total: ₹' + total + '\nExpected Delivery: 3-5 business days');
+                
+                // Reset form
+                orderForm.reset();
+                quantityDisplay.textContent = '-';
+                subtotalDisplay.textContent = '₹0';
+                deliveryDisplay.textContent = '₹50';
+                totalDisplay.textContent = '₹0';
+            });
+        }
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData);
+                
+                // Create email content
+                const subject = `Mithila Food Agency Contact: ${data.subject}`;
+                const body = `
+Hello Mithila Food Agency Team,
+
+I'm reaching out through your website contact form.
+
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone || 'Not provided'}
+Subject: ${data.subject}
+
+Message:
+${data.message}
+
+Best regards,
+${data.name}
+                `.trim();
+
+                // Create mailto link
+                const mailtoLink = `mailto:jhaharsh2004@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                alert('Thank you for contacting us! Your email client will open with the message ready to send. We\'ll respond within 24 hours.');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+
+        // Scroll functions for hero CTAs
+        function scrollToProducts() {
+            document.getElementById('products').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        function scrollToInfo() {
+            document.getElementById('why-makhana').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Utility functions
+        function scrollToTop() {
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth' 
+            });
+        }
+
+        function openWhatsApp() {
+            const message = encodeURIComponent('Hi! I\'m interested in your premium makhana products. Could you help me with more information about your collection and delivery options?');
+            window.open(`https://wa.me/9930315235?text=${message}`, '_blank');
+        }
+
+        // Smooth fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Initialize first page animations
+        setTimeout(() => {
+            document.querySelectorAll('#home .fade-in').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }, 100);
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255,255,255,0.98)';
+                header.style.backdropFilter = 'blur(15px)';
+            } else {
+                header.style.background = 'rgba(255,255,255,0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+            document.body.style.transition = 'opacity 0.3s ease';
+        });
+
+        // Add ripple effect to buttons
+        document.querySelectorAll('.btn, .product-card, .story-card').forEach(element => {
+            element.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255,255,255,0.3)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.pointerEvents = 'none';
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add CSS for ripple animation and other improvements
+        const additionalStyle = document.createElement('style');
+        additionalStyle.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+            
+            /* Loading state */
+            body {
+                opacity: 0;
+            }
+            
+            /* Focus styles for accessibility */
+            .btn:focus,
+            .nav-menu a:focus,
+            input:focus,
+            textarea:focus,
+            select:focus {
+                outline: 3px solid var(--primary-yellow);
+                outline-offset: 2px;
+            }
+            
+            /* Mobile optimizations */
+            @media (max-width: 480px) {
+                .hero h1 {
+                    font-size: 2rem;
+                }
+                
+                .hero-subtitle {
+                    font-size: 1rem;
+                }
+                
+                .section-title {
+                    font-size: 1.8rem;
+                }
+                
+                .product-card, .story-card {
+                    padding: 1.5rem;
+                }
+                
+                .product-image {
+                    width: 150px;
+                    height: 150px;
+                    font-size: 3rem;
+                }
+                
+                .benefit-icon {
+                    width: 60px;
+                    height: 60px;
+                    font-size: 1.5rem;
+                }
+                
+                .logo-text {
+                    font-size: 1rem;
+                }
+                
+                .logo-tagline {
+                    font-size: 0.6rem;
+                }
+            }
+            
+            /* Smooth transitions */
+            .btn, .nav-menu a, .social-link, .delivery-partner {
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+            
+            /* Accessibility improvements */
+            @media (prefers-reduced-motion: reduce) {
+                *, *::before, *::after {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
+                }
+            }
+        `;
+        document.head.appendChild(additionalStyle);
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Mithila Food Agency website loaded successfully');
+        });
+
+        // Final performance optimization
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+            
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach(el => {
+                    if (el.style.opacity === '0') {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+
     <!-- Order Page -->
     <div class="current-page" id="order">
         <section class="section" style="padding-top: 8rem;">
             <div class="container">
                 <div class="section-header fade-in">
                     <span class="section-badge">Direct Order</span>
-                    <h2 class="section-title">Place Your Order</h2>
+                    <h2 class="section-title">Order Your Premium Makhana</h2>
                     <p class="section-subtitle">Fresh from our farmers to your doorstep. Free delivery across India for orders above ₹500</p>
                 </div>
                 
-                <!-- Order Form -->
-                <div class="contact-form fade-in">
-                    <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary-red); font-family: 'Playfair Display', serif; font-size: 1.8rem;">Complete Your Order</h3>
-                    <form id="orderForm">
-                        <div class="form-group">
-                            <label for="orderName">Full Name *</label>
-                            <input type="text" id="orderName" name="name" required placeholder="Enter your full name">
+                <!-- Product Summary Card -->
+                <div class="product-card fade-in" style="max-width: 600px; margin: 2rem auto;">
+                    <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                        <div class="product-image" style="width: 150px; height: 150px; flex-shrink: 0;">
+                            <span style="position: relative; z-index: 2;">🥜</span>
                         </div>
-                        <div class="order-form-grid">
+                        <div style="flex: 1;">
+                            <h3 class="product-title" style="margin-bottom: 0.5rem; font-size: 1.4rem;">Premium Himalayan Salt Makhana</h3>
+                            <p class="product-price" style="font-size: 1.6rem; margin-bottom: 1rem;">₹299 / 250g</p>
+                            <div style="font-size: 0.9rem; color: var(--text-light);">
+                                <p>✅ Hand-picked from Mithila ponds</p>
+                                <p>✅ Traditional roasting process</p>
+                                <p>✅ Premium Himalayan pink salt</p>
+                                <p>✅ Fresh delivery in 3-5 days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Form -->
+                <div class="contact-form fade-in" style="max-width: 700px;">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary-red); font-family: 'Playfair Display', serif; font-size: 1.8rem;">Complete Your Order</h3>
+                    <form id="orderForm" action="#" method="POST">
+                        <div class="order-form-grid" style="margin-bottom: 2rem;">
+                            <div class="form-group">
+                                <label for="orderName">Full Name *</label>
+                                <input type="text" id="orderName" name="name" required placeholder="Enter your full name">
+                            </div>
                             <div class="form-group">
                                 <label for="orderPhone">Mobile Number *</label>
-                                <input type="tel" id="orderPhone" name="phone" required placeholder="+91 9930315235" pattern="[0-9]{10}">
-                            </div>
-                            <div class="form-group">
-                                <label for="orderEmail">Email Address *</label>
-                                <input type="email" id="orderEmail" name="email" required placeholder="Mithilafoodagency@gmail.com">
+                                <input type="tel" id="orderPhone" name="phone" required placeholder="+91 98765 43210" pattern="[0-9]{10}">
                             </div>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="orderFlavour">Select Flavor *</label>
-                            <select id="orderFlavour" name="flavour" required>
-                                <option value="">Select a flavor</option>
-                                <option value="Chat Masala">Chat Masala</option>
-                                <option value="Pudina Lemon">Pudina Lemon</option>
-                                <option value="Salt and Pepper">Salt and Pepper</option>
-                                <option value="Cocktail Chakna">Cocktail Chakna</option>
-                                <option value="Peri Peri">Peri Peri</option>
-                            </select>
+                            <label for="orderEmail">Email Address *</label>
+                            <input type="email" id="orderEmail" name="email" required placeholder="your.email@example.com">
                         </div>
+                        
                         <div class="form-group">
                             <label for="orderQuantity">Quantity *</label>
                             <select id="orderQuantity" name="quantity" required>
                                 <option value="">Select Quantity</option>
-                                <option value="1">1 Pack</option>
-                                <option value="2">2 Packs</option>
-                                <option value="3">3 Packs</option>
-                                <option value="5">5 Packs</option>
-                                <option value="10">10 Packs</option>
+                                <option value="1">1 Pack - ₹299</option>
+                                <option value="2">2 Packs - ₹598 (Save ₹0)</option>
+                                <option value="3">3 Packs - ₹897 (Save ₹0)</option>
+                                <option value="5">5 Packs - ₹1,495 (Save ₹0)</option>
+                                <option value="10">10 Packs - ₹2,990 (Bulk Order)</option>
                             </select>
                         </div>
+
                         <div class="form-group">
                             <label for="orderAddress">Complete Delivery Address *</label>
                             <textarea id="orderAddress" name="address" required placeholder="Enter your complete address including:
@@ -1204,19 +1849,30 @@
 - City, State
 - PIN Code" style="height: 120px;"></textarea>
                         </div>
+
                         <div class="form-group">
                             <label for="orderNotes">Special Instructions (Optional)</label>
                             <textarea id="orderNotes" name="notes" placeholder="Any special delivery instructions, preferred time, etc." style="height: 80px;"></textarea>
                         </div>
+
+                        <!-- Order Summary -->
                         <div class="order-summary">
                             <h4 style="color: var(--primary-red); margin-bottom: 1rem; font-size: 1.3rem;">Order Summary</h4>
                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                                <span>Flavor:</span>
-                                <span id="orderFlavourDisplay">-</span>
+                                <span>Product:</span>
+                                <span>Premium Himalayan Salt Makhana</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Price per pack:</span>
+                                <span>₹299</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                                 <span>Quantity:</span>
                                 <span id="orderQuantityDisplay">-</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Subtotal:</span>
+                                <span id="orderSubtotal">₹0</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                                 <span>Delivery Charges:</span>
@@ -1234,6 +1890,16 @@
                         <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1.5rem;">
                             <i class="fas fa-check-circle"></i> Place Order Now
                         </button>
+                        
+                        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: var(--cream); border-radius: 15px;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 1rem;">Payment & Delivery Information</h4>
+                            <div style="font-size: 0.95rem; line-height: 1.6; color: var(--text-dark);">
+                                <p>💳 <strong>Payment:</strong> Cash on Delivery (COD) available</p>
+                                <p>📦 <strong>Delivery:</strong> 3-5 business days across India</p>
+                                <p>📞 <strong>Order Confirmation:</strong> We'll call you within 2 hours</p>
+                                <p>🔄 <strong>Return Policy:</strong> 7-day return/exchange guarantee</p>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -1337,446 +2003,4 @@
                             <h3 class="story-title">The Ayurvedic Benefits of Makhana: Ancient Wisdom Meets Modern Science</h3>
                             <p class="story-text">In traditional Ayurveda, makhana is revered as a sattvic food that balances all three doshas while promoting mental clarity and spiritual well-being. Modern research now confirms many of these traditional benefits, bridging ancient wisdom with contemporary nutritional science in fascinating ways.</p>
                             <a href="https://www.makhana.com/about-makhana" target="_blank" class="read-more">
-                                Explore Ayurvedic Benefits <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Contact Page -->
-    <div class="current-page" id="contact">
-        <section class="section" style="padding-top: 8rem;">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <span class="section-badge">Get in Touch</span>
-                    <h2 class="section-title">Let's Connect!</h2>
-                    <p class="section-subtitle">We'd love to hear from you. Get in touch for questions, partnerships, or just to share your makhana stories with us.</p>
-                </div>
-                <div class="contact-form fade-in">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="Mithilafoodagency@gmail.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 9930315235">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" placeholder="Tell us how we can help you, share your feedback, or ask any questions..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-                <div class="story-grid">
-                    <div class="story-card fade-in">
-                        <div class="story-image">
-                            <i class="fas fa-envelope" style="font-size: 5rem; color: white;"></i>
-                        </div>
-                        <div class="story-content">
-                            <span class="story-badge">Email Us</span>
-                            <h3 class="story-title">Direct Communication</h3>
-                            <p class="story-text">
-                                <strong>General Inquiries:</strong><br>
-                                <a href="mailto:Mithilafoodagency@gmail.com" style="color: var(--primary-red); text-decoration: none;">Mithilafoodagency@gmail.com</a><br><br>
-                                <strong>Orders & Support:</strong><br>
-                                <a href="mailto:Mithilafoodagency@gmail.com" style="color: var(--primary-red); text-decoration: none;">Mithilafoodagency@gmail.com</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="story-card fade-in">
-                        <div class="story-image">
-                            <i class="fas fa-phone" style="font-size: 5rem; color: white;"></i>
-                        </div>
-                        <div class="story-content">
-                            <span class="story-badge">Call or WhatsApp</span>
-                            <h3 class="story-title">Instant Support</h3>
-                            <p class="story-text">
-                                <strong>Phone:</strong><br>
-                                <a href="tel:+919930315235" style="color: var(--primary-red); text-decoration: none;">+91 9930315235</a><br><br>
-                                <strong>WhatsApp:</strong><br>
-                                <a href="https://wa.me/919930315235" style="color: var(--primary-red); text-decoration: none;">+91 9930315235</a><br><br>
-                                <em>Available: Mon-Sat, 9 AM - 7 PM IST</em>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="story-card fade-in">
-                        <div class="story-image">
-                            <i class="fas fa-map-marker-alt" style="font-size: 5rem; color: white;"></i>
-                        </div>
-                        <div class="story-content">
-                            <span class="story-badge">Visit Us</span>
-                            <h3 class="story-title">Our Address</h3>
-                            <p class="story-text">
-                                <strong>Mithila Food Agency</strong><br>
-                                Village: Parsauni<br>
-                                Block: Sakri<br>
-                                Muzaffarpur, Bihar - 843113<br>
-                                India<br><br>
-                                <em>Visit our processing facility and meet our team!</em>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">🪷 Mithila Food Agency</div>
-            <p>Pag Pag Makhana Aa Mach • Authentic Makhana from the Heart of Bihar • Preserving Tradition, Delivering Wellness</p>
-            <div class="footer-social">
-                <a href="https://wa.me/919930315235" class="social-link" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="tel:+919930315235" class="social-link" title="Phone Call">
-                    <i class="fas fa-phone"></i>
-                </a>
-                <a href="mailto:Mithilafoodagency@gmail.com" class="social-link" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="#" class="social-link" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-link" title="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-            </div>
-            <p style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem;">
-                © 2025 Mithila Food Agency. All rights reserved.<br>
-                Made with ❤️ in Bihar • Trusted by families across India
-            </p>
-        </div>
-    </footer>
-
-    <!-- Floating Navigation -->
-    <div class="page-nav">
-        <div class="nav-buttons">
-            <button class="nav-btn" onclick="scrollToTop()" title="Go to Top">
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            <a href="tel:+919930315235" class="nav-btn call-btn" title="Call Us">
-                <i class="fas fa-phone"></i>
-            </a>
-            <a href="https://wa.me/919930315235" class="nav-btn" title="WhatsApp Us">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-    </div>
-
-    <script>
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        const navLinks = document.querySelectorAll('.nav-link');
-        const pages = document.querySelectorAll('.current-page');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetPage = link.getAttribute('data-page');
-                
-                navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-                
-                pages.forEach(page => {
-                    page.classList.remove('show');
-                    if (page.id === targetPage) {
-                        page.classList.add('show');
-                    }
-                });
-
-                navMenu.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-                scrollToTop();
-            });
-        });
-        
-        // Show Order Page Function
-        function showOrderPage() {
-            navLinks.forEach(l => l.classList.remove('active'));
-            document.querySelector('.nav-link[data-page="order"]').classList.add('active');
-            
-            pages.forEach(page => page.classList.remove('show'));
-            document.getElementById('order').classList.add('show');
-            
-            scrollToTop();
-        }
-
-        // Order quantity calculator and summary update
-        const orderForm = document.getElementById('orderForm');
-        if (orderForm) {
-            orderForm.addEventListener('change', updateOrderSummary);
-            orderForm.addEventListener('submit', handleOrderSubmit);
-        }
-
-        function updateOrderSummary() {
-            const flavourSelect = document.getElementById('orderFlavour');
-            const quantitySelect = document.getElementById('orderQuantity');
-            
-            const selectedFlavour = flavourSelect.value;
-            const selectedQuantity = parseInt(quantitySelect.value) || 0;
-            const pricePerPack = 299; // Assuming a fixed price for now
-            const subtotal = selectedQuantity * pricePerPack;
-            let deliveryCharge = 50;
-            
-            if (subtotal >= 500) {
-                deliveryCharge = 0;
-            }
-            const total = subtotal + deliveryCharge;
-
-            document.getElementById('orderFlavourDisplay').textContent = selectedFlavour || '-';
-            document.getElementById('orderQuantityDisplay').textContent = selectedQuantity > 0 ? selectedQuantity + ' pack(s)' : '-';
-            document.getElementById('deliveryCharges').textContent = deliveryCharge === 0 ? 'FREE' : '₹' + deliveryCharge;
-            document.getElementById('orderTotal').textContent = '₹' + total;
-        }
-
-        function handleOrderSubmit(e) {
-            e.preventDefault();
-            const formData = new FormData(orderForm);
-            const data = Object.fromEntries(formData);
-            
-            const quantity = parseInt(data.quantity) || 0;
-            const subtotal = quantity * 299;
-            const delivery = subtotal >= 500 ? 0 : 50;
-            const total = subtotal + delivery;
-            
-            const subject = `New Makhana Order from ${data.name}`;
-            const body = `
-🛒 NEW ORDER RECEIVED!
-
-CUSTOMER DETAILS:
-📋 Name: ${data.name}
-📞 Phone: ${data.phone}
-📧 Email: ${data.email}
-
-ORDER DETAILS:
-🥜 Flavor: ${data.flavour}
-📦 Quantity: ${quantity} pack(s)
-🚚 Delivery: ${delivery === 0 ? 'FREE' : '₹' + delivery}
-💳 Total Amount: ₹${total}
-
-DELIVERY ADDRESS:
-📍 ${data.address}
-
-SPECIAL INSTRUCTIONS:
-${data.notes || 'None'}
-
----
-Order placed through: Mithila Food Agency Website
-Time: ${new Date().toLocaleString('en-IN')}
-            `.trim();
-
-            const mailtoLink = `mailto:Mithilafoodagency@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoLink;
-        }
-
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const formData = new FormData(contactForm);
-                const data = Object.fromEntries(formData);
-                
-                const subject = `Mithila Food Agency Contact: ${data.subject}`;
-                const body = `
-Hello Mithila Food Agency Team,
-
-I'm reaching out through your website contact form.
-
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone || 'Not provided'}
-Subject: ${data.subject}
-
-Message:
-${data.message}
-
-Best regards,
-${data.name}
-                `.trim();
-
-                const mailtoLink = `mailto:Mithilafoodagency@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                window.location.href = mailtoLink;
-                
-                contactForm.reset();
-            });
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ 
-                top: 0, 
-                behavior: 'smooth' 
-            });
-        }
-
-        function scrollToInfo() {
-            document.getElementById('why-makhana').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-        
-        // Smooth fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
-        });
-
-        // Initialize first page animations
-        setTimeout(() => {
-            document.querySelectorAll('#home .fade-in').forEach(el => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            });
-        }, 100);
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255,255,255,0.98)';
-                header.style.backdropFilter = 'blur(15px)';
-            } else {
-                header.style.background = 'rgba(255,255,255,0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            }
-        });
-
-        // Add loading animation
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '1';
-            document.body.style.transition = 'opacity 0.3s ease';
-        });
-
-        // Add ripple effect to buttons
-        document.querySelectorAll('.btn, .product-card, .story-card, .flavour-card').forEach(element => {
-            element.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                ripple.style.position = 'absolute';
-                ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(255,255,255,0.3)';
-                ripple.style.transform = 'scale(0)';
-                ripple.style.animation = 'ripple 0.6s linear';
-                ripple.style.pointerEvents = 'none';
-                
-                this.style.position = 'relative';
-                this.style.overflow = 'hidden';
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-        
-        // Add CSS for ripple animation and other improvements
-        const additionalStyle = document.createElement('style');
-        additionalStyle.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(2);
-                    opacity: 0;
-                }
-            }
-            
-            body {
-                opacity: 0;
-            }
-            
-            .btn:focus,
-            .nav-menu a:focus,
-            input:focus,
-            textarea:focus,
-            select:focus {
-                outline: 3px solid var(--primary-yellow);
-                outline-offset: 2px;
-            }
-            
-            .btn, .nav-menu a, .social-link, .nav-btn, .delivery-partner {
-                -webkit-transform: translateZ(0);
-                transform: translateZ(0);
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-            }
-            
-            @media (prefers-reduced-motion: reduce) {
-                *, *::before, *::after {
-                    animation-duration: 0.01ms !important;
-                    animation-iteration-count: 1 !important;
-                    transition-duration: 0.01ms !important;
-                }
-            }
-        `;
-        document.head.appendChild(additionalStyle);
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('Mithila Food Agency website loaded successfully');
-            updateOrderSummary();
-        });
-
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '1';
-            setTimeout(() => {
-                document.querySelectorAll('.fade-in').forEach(el => {
-                    if (el.style.opacity === '0') {
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    }
-                });
-            }, 500);
-        });
-    </script>
-</body>
-</html>
+                                Explore Ayurvedic Benefits
