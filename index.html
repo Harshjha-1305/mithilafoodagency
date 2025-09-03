@@ -726,10 +726,18 @@
         
         /* Floating Call Button */
         .call-btn {
-            background-color: #25D366; /* WhatsApp green */
+            background-color: #007bb5; 
         }
         
         .call-btn:hover {
+            background-color: #005f88;
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+        .whatsapp-btn:hover {
             background-color: #128C7E;
         }
 
@@ -953,21 +961,6 @@
         .fade-in {
             animation: fadeInUp 0.6s ease-out;
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: bold;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 50px;
-            width: auto;
-            border-radius: 8px; /* optional for rounded corners */
-        }
-
     </style>
 </head>
 <body>
@@ -975,9 +968,8 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-           <div class="logo-section">
-                <h1 class="logo">
-                <img src="assets/logo.png" alt="Mithila Food Agency Logo">
+            <div class="logo-section">
+                <div class="logo-icon">🪷</div>
                 <div>
                     <div class="logo-text">Mithila Food Agency</div>
                     <div class="logo-tagline">Pag Pag Makhana Aa Mach</div>
@@ -1066,6 +1058,62 @@
                             <h3 class="benefit-title">Rich in Antioxidants</h3>
                             <p class="benefit-subtitle">Flavonoids & polyphenols for immune support</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Comparison Section -->
+        <section class="section" id="comparison">
+            <div class="container">
+                <div class="comparison-section fade-in">
+                    <div class="section-header">
+                        <h2 class="section-title">How Mithila Fox Nuts Compare</h2>
+                        <p class="section-subtitle">See why makhana is the smarter choice for your health</p>
+                    </div>
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nutrient (per 100g)</th>
+                                    <th class="highlight">Fox Nuts (Makhana)</th>
+                                    <th>Potato Chips</th>
+                                    <th>Almonds</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Calories</td>
+                                    <td class="highlight">347 kcal</td>
+                                    <td>536 kcal</td>
+                                    <td>579 kcal</td>
+                                </tr>
+                                <tr>
+                                    <td>Protein</td>
+                                    <td class="highlight">9.7g</td>
+                                    <td>7g</td>
+                                    <td>21g</td>
+                                </tr>
+                                <tr>
+                                    <td>Fat</td>
+                                    <td class="highlight">0.1g</td>
+                                    <td>37g</td>
+                                    <td>50g</td>
+                                </tr>
+                                <tr>
+                                    <td>Cholesterol</td>
+                                    <td class="highlight">0mg</td>
+                                    <td>11mg</td>
+                                    <td>0mg</td>
+                                </tr>
+                                <tr>
+                                    <td>Fiber</td>
+                                    <td class="highlight">14.5g</td>
+                                    <td>4.8g</td>
+                                    <td>12.5g</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -1459,7 +1507,7 @@
             <div class="footer-logo"> Mithila Food Agency</div>
             <p>Pag Pag Makhana Aa Mach • Authentic Makhana from the Heart of Bihar • Preserving Tradition, Delivering Wellness</p>
             <div class="footer-social">
-                <a href="https://wa.me/919930315235" class="social-link" title="WhatsApp">
+                <a href="https://wa.me/919930315235" class="social-link whatsapp-btn" title="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
                 <a href="tel:+919930315235" class="social-link" title="Phone Call">
@@ -1491,7 +1539,7 @@
             <a href="tel:+919930315235" class="nav-btn call-btn" title="Call Us">
                 <i class="fas fa-phone"></i>
             </a>
-            <a href="https://wa.me/919930315235" class="nav-btn" title="WhatsApp Us">
+            <a href="https://wa.me/919930315235" class="nav-btn whatsapp-btn" title="WhatsApp Us">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
