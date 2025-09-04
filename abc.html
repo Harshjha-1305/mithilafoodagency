@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <title>Mithila Food Agency - Premium Makhana from Bihar</title>
+    <meta name="description" content="Discover Mithila Food Agency's authentic, hand-harvested makhana (fox nuts) from Bihar. A healthy, gluten-free, and protein-rich snack inspired by Maithili culture.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #D32F2F;
+            --primary-yellow: #F9A825;
+            --primary-orange: #FF7043;
+            --deep-brown: #5D4037;
+            --cream: #FFF8E1;
+            --warm-white: #FFFEF7;
+            --mithila-blue: #1976D2;
+            --accent-green: #388E3C;
+            --text-dark: #2E2E2E;
+            --text-light: #666;
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --gradient-bg: linear-gradient(135deg, var(--cream) 0%, #FFF3E0 50%, var(--warm-white) 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--gradient-bg);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .page-wrapper {
+            flex: 1;
+        }
+
+        /* Header Styles */
+        .header {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            border-bottom: 1px solid rgba(211,47,47,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: var(--primary-red);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background: var(--primary-yellow);
+            color: var(--deep-brown);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 50%, var(--primary-yellow) 100%);
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm0 40c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm-30-20c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm60 0c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10z" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-yellow);
+            color: var(--deep-brown);
+            border-color: var(--primary-yellow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--deep-brown);
+            color: var(--primary-yellow);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-red);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--primary-yellow);
+            color: var(--deep-brown);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Product Cards - Enhanced for Mobile */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 0 1rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(211,47,47,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-bg);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-orange);
+            border: 4px solid var(--primary-yellow);
+            position: relative;
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .whatsapp-order-section {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .quantity-btn {
+            width: 35px;
+            height: 35px;
+            border: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .quantity-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+
+        .quantity-display {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            min-width: 60px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .whatsapp-btn {
+            background: white;
+            color: #25D366;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Benefits Grid - Mobile Optimized */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .benefit-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .benefit-subtitle {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Story Cards - Mobile Optimized */
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(211,47,47,0.1);
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--primary-orange);
+        }
+
+        .story-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(211,47,47,0.7), rgba(255,112,67,0.7));
+        }
+
+        .story-content {
+            padding: 2rem 1.5rem;
+        }
+
+        .story-badge {
+            display: inline-block;
+            background: var(--primary-orange);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .story-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .story-text {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Form - Mobile Optimized */
+        .contact-form {
+            background: white;
+            border-radius: 25px;
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            margin: 2rem auto;
+            border: 1px solid rgba(211,47,47,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--deep-brown);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 3px rgba(255,112,67,0.1);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer - Mobile Optimized */
+        .footer {
+            background: linear-gradient(135deg, var(--deep-brown), #3E2723);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-yellow);
+        }
+
+        .footer-logo img {
+            height: 60px;
+            width: auto;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-red);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            background: var(--primary-yellow);
+            color: var(--deep-brown);
+        }
+
+        /* Floating Navigation - Mobile Optimized */
+        .page-nav {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 1000;
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .nav-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.05);
+            background: var(--primary-orange);
+        }
+
+        .whatsapp-btn-float {
+            background-color: #25D366;
+        }
+
+        .whatsapp-btn-float:hover {
+            background-color: #128C7E;
+        }
+
+        /* Mobile Specific Styles */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1.5rem;
+                box-shadow: var(--shadow);
+                border-radius: 0 0 15px 15px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-container {
+                padding: 0.8rem 1rem;
+            }
+
+            .logo img {
+                height: 35px;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+                padding: 1rem 1.5rem;
+            }
+
+            .section {
+                padding: 3rem 0.5rem;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0;
+            }
+
+            .product-card {
+                margin: 0 0.5rem;
+                padding: 1.5rem 1rem;
+            }
+
+            .product-image {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+
+            .product-title {
+                font-size: 1.2rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .story-image {
+                height: 180px;
+                font-size: 3rem;
+            }
+
+            .story-content {
+                padding: 1.5rem 1rem;
+            }
+
+            .contact-form {
+                margin: 1rem 0.5rem;
+                padding: 1.5rem 1rem;
+            }
+
+            .footer {
+                padding: 2rem 1rem 1.5rem;
+            }
+
+            .footer-logo {
+                font-size: 1.5rem;
+            }
+
+            .footer-logo img {
+                height: 50px;
+            }
+
+            .nav-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.1rem;
+            }
+
+            .page-nav {
+                bottom: 0.8rem;
+                right: 0.8rem;
+            }
+
+            .quantity-selector {
+                gap: 0.8rem;
+            }
+
+            .quantity-btn {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0.6rem 0.8rem;
+            }
+
+            .hero {
+                padding: 3rem 0.8rem;
+            }
+
+            .section {
+                padding: 2.5rem 0.3rem;
+            }
+
+            .product-card {
+                margin: 0 0.2rem;
+            }
+
+            .contact-form {
+                margin: 1rem 0.3rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Current Page Logic */
+        .current-page {
+            display: none;
+        }
+
+        .current-page.show {
+            display: block;
+        }
+        
+        /* New Home Page Sections */
+        .info-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(211,47,47,0.1);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .info-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--warm-white);
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-red);
+        }
+        
+        .info-icon {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+        
+        .info-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Comparison Table */
+        .comparison-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table th {
+            background: var(--primary-red);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table .winner {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+        
+        .comparison-icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+        
+        /* Order Form Styles */
+        .order-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-full-width {
+            grid-column: 1 / -1;
+        }
+        
+        /* Mithila Importance Section */
+        .mithila-importance {
+            background: linear-gradient(135deg, var(--cream) 0%, #FFF3E0 100%);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mithila-importance::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 C40,0 60,0 80,20 C100,40 100,60 80,80 C60,100 40,100 20,80 C0,60 0,40 20,20 Z" fill="rgba(211,47,47,0.03)"/></svg>') repeat;
+            opacity: 0.5;
+        }
+        
+        .mithila-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .mithila-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .mithila-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border-top: 4px solid var(--primary-red);
+        }
+        
+        .mithila-card i {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+        
+        .mithila-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .mithila-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .website-url {
+            display: inline-block;
+            background: var(--primary-yellow);
+            color: var(--deep-brown);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .website-url:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav-container">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="Mithila Food Agency Logo">
+                        <div class="logo-text">Mithila Food Agency</div>
+                    </div>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About Us</a></li>
+                    <li><a href="#" class="nav-link" data-page="products">Products</a></li>
+                    <li><a href="#" class="nav-link" data-page="order">Order Now</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Home Page -->
+        <div class="current-page show" id="home">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content fade-in">
+                    <h1>Welcome to the Essence of Mithila</h1>
+                    <p class="hero-subtitle">The ancient superfood your modern lifestyle needs. Discover premium makhana that bridges centuries of tradition with today's wellness goals, straight from the pristine ponds of Bihar.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" data-page="products">
+                            <i class="fas fa-shopping-bag"></i> Explore Products
+                        </a>
+                        <a href="#" class="btn btn-secondary" onclick="scrollToInfo()">
+                            <i class="fas fa-book-open"></i> Know More
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Nutritionists Recommend Section -->
+            <section class="section" id="why-makhana">
+                <div class="container">
+                    <div class="section-header fade-in">
+                        <span class="section-badge">Nutritionist Approved</span>
+                        <h2 class="section-title">Why Nutritionists Recommend Makhana</h2>
+                        <p class="section-subtitle">From the pristine lotus ponds of Mithila to your table - every kernel tells a story of purity, nutrition, and tradition</p>
+                    </div>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-card fade-in">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="benefit-title">Low Glycemic Index</h3>
+                            <p class="benefit-subtitle">Stable blood sugar, sustained energy for 3-4 hours</p>
+                        </div>
+                        <div class="benefit-card fade-in">
+                            <div class="benefit-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="benefit-title">Plant-Based Protein</h3>
+                            <p class="benefit-subtitle">9.7g per 100g - Complete amino acid profile</p>
+                        </div>
+                        <div class="benefit-card fade-in">
+                            <div class="benefit-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="benefit-title">Heart Healthy</h3>
+                            <p class="benefit-subtitle">Zero cholesterol, rich in magnesium & potassium</p>
+                        </div>
+                        <div class="benefit-card fade-in">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="benefit-title">Rich in Antioxidants</h3>
+                            <p class="benefit-subtitle">Flavonoids & polyphenols for immune support</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Featured Products on Home Page -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-header fade-in">
+                        <span class="section-badge">Our Best Sellers</span>
+                        <h2 class="section-title">Featured Makhana Products</h2>
+                        <p class="section-subtitle">Hand-harvested, traditionally processed, and packed with nutrition</p>
+                    </div>
+                    
+                    <div class="products-grid">
+                        <div class="product-card fade-in">
+                            <div class="product-image">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="product-title">Plain Makhana</h3>
+                            <div class="product-price">₹250 / 500g</div>
+                            <p class="product-description">Our premium plain makhana, perfect for cooking, roasting, or making traditional dishes. No additives or preservatives.</p>
+                            <div class="whatsapp-order-section">
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                                    <div class="quantity-display">1</div>
+                                    <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                <button class="whatsapp-btn" onclick="orderOnWhatsapp('Plain Makhana', 250)">
+                                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card fade-in">
+                            <div class="product-image">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3 class="product-title">Roasted Makhana</h3>
+                            <div class="product-price">₹280 / 500g</div>
+                            <p class="product-description">Lightly roasted to perfection with minimal oil. A healthy, crunchy snack ready to eat anytime.</p>
+                            <div class="whatsapp-order-section">
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                                    <div class="quantity-display">1</div>
+                                    <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                <button class="whatsapp-btn" onclick="orderOnWhatsapp('Roasted Makhana', 280)">
+                                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card fade-in">
+                            <div class="product-image">
+                                <i class="fas fa-mortar-pestle"></i>
+                            </div>
+                            <h3 class="product-title">Makhana Flour</h3>
+                            <div class="product-price">₹300 / 500g</div>
+                            <p class="product-description">Finely ground makhana flour, perfect for making rotis, porridge, or as a gluten-free alternative in baking.</p>
+                            <div class="whatsapp-order-section">
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn" onclick="decreaseQuantity(this)">-</button>
+                                    <div class="quantity-display">1</div>
+                                    <button class="quantity-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                                <button class="whatsapp-btn" onclick="orderOnWhatsapp('Makhana Flour', 300)">
+                                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Mithila Importance Section -->
+            <section class="section mithila-importance">
+                <div class="container mithila-content">
+                    <div class="section-header fade-in">
+                        <span class="section-badge">Cultural Heritage</span>
+                        <h2 class="section-title">Mithila: The Heartland of Makhana</h2>
+                        <p class="section-subtitle">Discover why Mithila's unique ecosystem produces the world's finest makhana</p>
+                    </div>
+                    
+                    <div class="mithila-grid">
+                        <div class="mithila-card fade-in">
+                            <i class="fas fa-water"></i>
+                            <h3>Pristine Water Ecosystems</h3>
+                            <p>Mithila's unique network of ponds and wetlands provides the perfect environment for lotus cultivation, resulting in superior quality makhana.</p>
+                        </div>
+                        
+                        <div class="mithila-card fade-in">
+                            <i class="fas fa-history"></i>
+                            <h3>Centuries of Tradition</h3>
+                            <p>For generations, Mithila's farmers have perfected the art of makhana cultivation and processing, preserving ancient techniques.</p>
+                        </div>
+                        
+                        <div class="mithila-card fade-in">
+                            <i class="fas fa-seedling"></i>
+                            <h3>Sustainable Farming</h3>
+                            <p>Makhana cultivation supports local ecosystems, provides livelihoods, and maintains biodiversity in the Mithila region.</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="https://www.mithilafoodagency.com" class="website-url" target="_blank">
+                            <i class="fas fa-globe"></i> www.mithilafoodagency.com
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Comparison Section -->
+            <section class="section">
+                <div class="container">
+                    <div class="comparison-section fade-in">
+                        <div class="section-header">
+                            <span class="section-badge">Nutrition Comparison</span>
+                            <h2 class="section-title">Why Makhana Outperforms Other Snacks</h2>
+                            <p class="section-subtitle">See how our makhana compares to other popular snacks in nutritional value</p>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nutrient (per 100g)</th>
+                                        <th>Makhana</th>
+                                        <th>Potato Chips</th>
+                                        <th>Popcorn</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Calories</td>
+                                        <td class="winner">350 kcal</td>
+                                        <td>536 kcal</td>
+                                        <td>387 kcal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td class="winner">9.7g</td>
+                                        <td>5.3g</td>
+                                        <td>12g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fat</td>
+                                        <td class="winner">0.1g</td>
+                                        <td>35g</td>
+                                        <td>4.5g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carbs</td>
+                                        <td>76.9g</td>
+                                        <td>53g</td>
+                                        <td class="winner">78g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fiber</td>
+                                        <td class="winner">14.5g</td>
+                                        <td>4.5g</td>
+                                        <td>15g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Glycemic Index</td>
+                                        <td class="winner">Low (30-35)</td>
+                                        <td>High (80-85)</td>
+                                        <td>Medium (55-60)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Order Page -->
+        <div class="current-page" id="order">
+            <section class="section">
+                <div class="container">
+                    <div class="section-header fade-in">
+                        <span class="section-badge">Secure Ordering</span>
+                        <h2 class="section-title">Place Your Order</h2>
+                        <p class="section-subtitle">Complete the form below and we'll prepare your makhana order with care</p>
+                    </div>
+                    
+                    <div class="order-form-container fade-in">
+                        <form class="contact-form" id="orderForm">
+                            <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary-red);">Order Details</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="productSelect">Select Product</label>
+                                    <select id="productSelect" required>
+                                        <option value="">Choose a product</option>
+                                        <option value="Plain Makhana">Plain Makhana - ₹250 / 500g</option>
+                                        <option value="Roasted Makhana">Roasted Makhana - ₹280 / 500g</option>
+                                        <option value="Makhana Flour">Makhana Flour - ₹300 / 500g</option>
+                                        <option value="Spiced Makhana">Spiced Makhana - ₹320 / 500g</option>
+                                        <option value="Makhana Namkeen">Makhana Namkeen - ₹350 / 500g</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="quantity">Quantity</label>
+                                    <input type="number" id="quantity" min="1" value="1" required>
+                                </div>
+                            </div>
+                            
+                            <h3 style="text-align: center; margin: 2rem 0; color: var(--primary-red);">Personal Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email">
+                            </div>
+                            
+                            <h3 style="text-align: center; margin: 2rem 0; color: var(--primary-red);">Delivery Address</h3>
+                            
+                            <div class="form-group">
+                                <label for="address">Street Address</label>
+                                <input type="text" id="address" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pincode">PIN Code</label>
+                                    <input type="text" id="pincode" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="landmark">Landmark (Optional)</label>
+                                    <input type="text" id="landmark">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="instructions">Delivery Instructions (Optional)</label>
+                                <textarea id="instructions"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
+                                <i class="fas fa-paper-plane"></i> Submit Order
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Other pages would go here (About, Products, Contact) -->
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="Mithila Food Agency Logo">
+                <div>Mithila Food Agency</div>
+            </div>
+            
+            <p>Bringing the authentic taste and nutrition of Mithila's makhana to your doorstep</p>
+            
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <p>&copy; 2025 Mithila Food Agency. All rights reserved.</p>
+            <p>www.mithilafoodagency.com</p>
+        </div>
+    </footer>
+    
+    <!-- Floating Navigation -->
+    <div class="page-nav">
+        <div class="nav-buttons">
+            <a href="#" class="nav-btn" data-page="home">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="#" class="nav-btn" data-page="products">
+                <i class="fas fa-shopping-bag"></i>
+            </a>
+            <a href="#" class="nav-btn" data-page="order">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="https://wa.me/919876543210" class="nav-btn whatsapp-btn-float">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+        
+        // Page navigation
+        document.querySelectorAll('.nav-link, .nav-btn').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetPage = this.getAttribute('data-page');
+                
+                // Hide all pages
+                document.querySelectorAll('.current-page').forEach(page => {
+                    page.classList.remove('show');
+                });
+                
+                // Show target page
+                document.getElementById(targetPage).classList.add('show');
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                document.querySelector(`.nav-link[data-page="${targetPage}"]`).classList.add('active');
+                
+                // Close mobile menu if open
+                document.getElementById('navMenu').classList.remove('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+        
+        // Quantity adjustment functions
+        function increaseQuantity(btn) {
+            const display = btn.parentElement.querySelector('.quantity-display');
+            let quantity = parseInt(display.textContent);
+            display.textContent = quantity + 1;
+        }
+        
+        function decreaseQuantity(btn) {
+            const display = btn.parentElement.querySelector('.quantity-display');
+            let quantity = parseInt(display.textContent);
+            if (quantity > 1) {
+                display.textContent = quantity - 1;
+            }
+        }
+        
+        // WhatsApp order function
+        function orderOnWhatsapp(product, price) {
+            const quantity = document.querySelector('.quantity-display').textContent;
+            const message = `Hello, I would like to order ${quantity} pack(s) of ${product} at ₹${price} each. Total: ₹${price * quantity}.`;
+            const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your order! We will contact you shortly to confirm details.');
+            this.reset();
+        });
+        
+        // Scroll animation for elements
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Initialize scroll animation
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        
+        // Function to scroll to info section
+        function scrollToInfo() {
+            document.getElementById('why-makhana').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

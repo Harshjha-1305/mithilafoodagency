@@ -147,7 +147,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm0 40c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm-30-20c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm60 0c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10z" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm0 40c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm-30-20c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm60 0c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10z" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
             opacity: 0.3;
         }
 
@@ -990,6 +990,55 @@
             border-radius: 8px; /* optional for rounded corners */
             
         }
+        
+        /* Makhana Info Section */
+        .makhana-info-section {
+            background: white;
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .makhana-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .makhana-info-card {
+            background: var(--warm-white);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border-left: 5px solid var(--primary-red);
+        }
+        
+        .makhana-info-icon {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+        }
+        
+        .makhana-info-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .makhana-info-text {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .makhana-importance {
+            background: linear-gradient(135deg, var(--cream) 0%, #FFF3E0 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+        }
     </style>
 </head>
 <body>
@@ -1036,18 +1085,18 @@
             </div>
         </section>
 
-        <!-- Why Nutritionists Recommend Section -->
-        <section class="section" id="why-makhana">
+        <!-- Makhana Information Section -->
+        <section class="section" id="makhana-info">
             <div class="container">
-                <div class="why-section fade-in">
+                <div class="makhana-info-section fade-in">
                     <div class="section-header">
-                        <span class="section-badge">Nutritionist Approved</span>
-                        <h2 class="section-title">Why Nutritionists Recommend Makhana</h2>
-                        <p class="section-subtitle">From the pristine lotus ponds of Mithila to your table - every kernel tells a story of purity, nutrition, and tradition</p>
+                        <span class="section-badge">Ancient Superfood</span>
+                        <h2 class="section-title">The Miracle of Makhana</h2>
+                        <p class="section-subtitle">Makhana, also known as fox nuts or lotus seeds, has been a cornerstone of Ayurvedic nutrition for over 3,000 years.</p>
                     </div>
                     
                     <div class="article-content">
-                        <p>Makhana, also known as fox nuts or lotus seeds, has been a cornerstone of Ayurvedic nutrition for over 3,000 years. In the fertile wetlands of Bihar's Mithila region, this "white gold" grows naturally in the sacred lotus ponds, where generations of skilled farmers have perfected the art of harvesting these precious seeds.</p>
+                        <p>In the fertile wetlands of Bihar's Mithila region, this "white gold" grows naturally in the sacred lotus ponds, where generations of skilled farmers have perfected the art of harvesting these precious seeds.</p>
                         
                         <div class="highlight-box">
                             <h4>🌿 Ancient Wisdom Meets Modern Science</h4>
@@ -1059,34 +1108,38 @@
                         <h3>The Mithila Difference: Why Our Makhana Stands Apart</h3>
                         <p>Our makhana comes exclusively from the traditional farming communities of Mithila, where the art of cultivation has been passed down through 15+ generations. The unique soil composition and pristine water quality of this region produce makhana with superior taste, texture, and nutritional density.</p>
                     </div>
-                    <div class="benefits-grid">
-                        <div class="benefit-card fade-in">
-                            <div class="benefit-icon">
+                    
+                    <div class="makhana-info-grid">
+                        <div class="makhana-info-card fade-in">
+                            <div class="makhana-info-icon">
                                 <i class="fas fa-chart-line"></i>
                             </div>
-                            <h3 class="benefit-title">Low Glycemic Index</h3>
-                            <p class="benefit-subtitle">Stable blood sugar, sustained energy for 3-4 hours</p>
+                            <h3 class="makhana-info-title">Low Glycemic Index</h3>
+                            <p class="makhana-info-text">Stable blood sugar, sustained energy for 3-4 hours. Perfect for diabetics and weight management.</p>
                         </div>
-                        <div class="benefit-card fade-in">
-                            <div class="benefit-icon">
+                        
+                        <div class="makhana-info-card fade-in">
+                            <div class="makhana-info-icon">
                                 <i class="fas fa-seedling"></i>
                             </div>
-                            <h3 class="benefit-title">Plant-Based Protein</h3>
-                            <p class="benefit-subtitle">9.7g per 100g - Complete amino acid profile</p>
+                            <h3 class="makhana-info-title">Plant-Based Protein</h3>
+                            <p class="makhana-info-text">9.7g per 100g - Complete amino acid profile. Excellent for vegetarians and vegans.</p>
                         </div>
-                        <div class="benefit-card fade-in">
-                            <div class="benefit-icon">
+                        
+                        <div class="makhana-info-card fade-in">
+                            <div class="makhana-info-icon">
                                 <i class="fas fa-heart"></i>
                             </div>
-                            <h3 class="benefit-title">Heart Healthy</h3>
-                            <p class="benefit-subtitle">Zero cholesterol, rich in magnesium & potassium</p>
+                            <h3 class="makhana-info-title">Heart Healthy</h3>
+                            <p class="makhana-info-text">Zero cholesterol, rich in magnesium & potassium. Supports cardiovascular health.</p>
                         </div>
-                        <div class="benefit-card fade-in">
-                            <div class="benefit-icon">
+                        
+                        <div class="makhana-info-card fade-in">
+                            <div class="makhana-info-icon">
                                 <i class="fas fa-shield-alt"></i>
                             </div>
-                            <h3 class="benefit-title">Rich in Antioxidants</h3>
-                            <p class="benefit-subtitle">Flavonoids & polyphenols for immune support</p>
+                            <h3 class="makhana-info-title">Rich in Antioxidants</h3>
+                            <p class="makhana-info-text">Flavonoids & polyphenols for immune support and cellular health.</p>
                         </div>
                     </div>
                 </div>
@@ -1149,59 +1202,62 @@
             </div>
         </section>
         
-        <!-- Product Cards -->
+        <!-- Product Flavors Section -->
         <section class="section" id="products" style="background: white;">
             <div class="container">
                 <div class="section-header fade-in">
                     <span class="section-badge">Premium Collection</span>
-                    <h2 class="section-title">Flavors of Mithila</h2>
+                    <h2 class="section-title">Our Makhana Flavors</h2>
                     <p class="section-subtitle">Handcrafted with love by traditional farmers of Mithila, each pack tells a story of generations of expertise and dedication to quality.</p>
                 </div>
                 <div class="flavour-grid">
                     <div class="flavour-card fade-in">
                         <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
+                            <span class="product-image-placeholder">Plain Makhana</span>
+                        </div>
+                        <h3 class="product-title">Plain Makhana</h3>
+                        <p class="product-description">Pure, unflavored makhana with its natural nutty taste. Perfect for cooking, making kheer, or enjoying as a light snack.</p>
+                        <p class="product-price">Price: ₹250</p>
+                    </div>
+                    <div class="flavour-card fade-in">
+                        <div class="flavour-image">
+                            <span class="product-image-placeholder">Chat Masala</span>
                         </div>
                         <h3 class="product-title">Chat Masala</h3>
                         <p class="product-description">A tangy and spicy blend of traditional chat masala to give you an authentic street food experience. Perfect for a savory treat.</p>
-                        <p class="product-price">Price: ₹XXX</p>
+                        <p class="product-price">Price: ₹280</p>
                     </div>
                     <div class="flavour-card fade-in">
                         <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
+                            <span class="product-image-placeholder">Pudina Lemon</span>
                         </div>
                         <h3 class="product-title">Pudina Lemon</h3>
                         <p class="product-description">A refreshing and zesty flavor with the coolness of mint and the tanginess of lemon. Ideal for a light, summery snack.</p>
-                        <p class="product-price">Price: ₹XXX</p>
+                        <p class="product-price">Price: ₹280</p>
                     </div>
                     <div class="flavour-card fade-in">
                         <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
+                            <span class="product-image-placeholder">Salt and Pepper</span>
                         </div>
                         <h3 class="product-title">Salt and Pepper</h3>
                         <p class="product-description">A timeless classic with the perfect balance of savory salt and a kick of fresh black pepper. Simple, yet satisfying.</p>
-                        <p class="product-price">Price: ₹XXX</p>
+                        <p class="product-price">Price: ₹270</p>
                     </div>
                     <div class="flavour-card fade-in">
                         <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
+                            <span class="product-image-placeholder">Cocktail Chakna</span>
                         </div>
                         <h3 class="product-title">Cocktail Chakna</h3>
                         <p class="product-description">A crunchy and flavorful mix designed to complement your favorite beverages. A party-in-a-pack for any gathering.</p>
-                        <p class="product-price">Price: ₹XXX</p>
+                        <p class="product-price">Price: ₹300</p>
                     </div>
                     <div class="flavour-card fade-in">
                         <div class="flavour-image">
-                            <!-- Placeholder for an image -->
-                            <span class="product-image-placeholder">Image Here</span>
+                            <span class="product-image-placeholder">Peri Peri</span>
                         </div>
                         <h3 class="product-title">Peri Peri</h3>
                         <p class="product-description">For the spice lovers! A fiery and bold Peri Peri flavor that will tantalize your taste buds. An addictive snack with a spicy kick.</p>
-                        <p class="product-price">Price: ₹XXX</p>
+                        <p class="product-price">Price: ₹290</p>
                     </div>
                 </div>
             </div>
@@ -1271,11 +1327,12 @@
                             <label for="orderFlavour">Select Flavor *</label>
                             <select id="orderFlavour" name="flavour" required>
                                 <option value="">Select a flavor</option>
-                                <option value="Chat Masala">Chat Masala</option>
-                                <option value="Pudina Lemon">Pudina Lemon</option>
-                                <option value="Salt and Pepper">Salt and Pepper</option>
-                                <option value="Cocktail Chakna">Cocktail Chakna</option>
-                                <option value="Peri Peri">Peri Peri</option>
+                                <option value="Plain Makhana">Plain Makhana - ₹250</option>
+                                <option value="Chat Masala">Chat Masala - ₹280</option>
+                                <option value="Pudina Lemon">Pudina Lemon - ₹280</option>
+                                <option value="Salt and Pepper">Salt and Pepper - ₹270</option>
+                                <option value="Cocktail Chakna">Cocktail Chakna - ₹300</option>
+                                <option value="Peri Peri">Peri Peri - ₹290</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -1536,7 +1593,8 @@
         <div class="footer-content">
             <div class="footer-logo"> 
                 <div class="footer-logo-icon"><img src="assets/logo.png" alt="Mithila Food Agency Logo">
-                </div>Mithila Food Agency</div>
+                </div>Mithila Food Agency
+            </div>
             <p>Pag Pag Makhana Aa Mach • Authentic Makhana from the Heart of Bihar • Preserving Tradition, Delivering Wellness</p>
             <div class="footer-social">
                 <a href="https://wa.me/919930315235" class="social-link whatsapp-btn" title="WhatsApp">
@@ -1638,7 +1696,13 @@
             
             const selectedFlavour = flavourSelect.value;
             const selectedQuantity = parseInt(quantitySelect.value) || 0;
-            const pricePerPack = 299; // Assuming a fixed price for now
+            
+            // Extract price from selected flavor
+            let pricePerPack = 250; // Default price
+            if (selectedFlavour.includes('₹')) {
+                pricePerPack = parseInt(selectedFlavour.split('₹')[1]);
+            }
+            
             const subtotal = selectedQuantity * pricePerPack;
             let deliveryCharge = 50;
             
@@ -1647,7 +1711,7 @@
             }
             const total = subtotal + deliveryCharge;
 
-            document.getElementById('orderFlavourDisplay').textContent = selectedFlavour || '-';
+            document.getElementById('orderFlavourDisplay').textContent = selectedFlavour.split('-')[0] || '-';
             document.getElementById('orderQuantityDisplay').textContent = selectedQuantity > 0 ? selectedQuantity + ' pack(s)' : '-';
             document.getElementById('deliveryCharges').textContent = deliveryCharge === 0 ? 'FREE' : '₹' + deliveryCharge;
             document.getElementById('orderTotal').textContent = '₹' + total;
@@ -1658,8 +1722,14 @@
             const formData = new FormData(orderForm);
             const data = Object.fromEntries(formData);
             
+            // Extract price from flavor selection
+            let pricePerPack = 250;
+            if (data.flavour.includes('₹')) {
+                pricePerPack = parseInt(data.flavour.split('₹')[1]);
+            }
+            
             const quantity = parseInt(data.quantity) || 0;
-            const subtotal = quantity * 299;
+            const subtotal = quantity * pricePerPack;
             const delivery = subtotal >= 500 ? 0 : 50;
             const total = subtotal + delivery;
             
@@ -1673,8 +1743,10 @@ CUSTOMER DETAILS:
 📧 Email: ${data.email}
 
 ORDER DETAILS:
-🥜 Flavor: ${data.flavour}
+🥜 Flavor: ${data.flavour.split('-')[0]}
 📦 Quantity: ${quantity} pack(s)
+💰 Price per pack: ₹${pricePerPack}
+💵 Subtotal: ₹${subtotal}
 🚚 Delivery: ${delivery === 0 ? 'FREE' : '₹' + delivery}
 💳 Total Amount: ₹${total}
 
@@ -1734,7 +1806,7 @@ ${data.name}
         }
 
         function scrollToInfo() {
-            document.getElementById('why-makhana').scrollIntoView({ 
+            document.getElementById('makhana-info').scrollIntoView({ 
                 behavior: 'smooth',
                 block: 'start'
             });
