@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <title>Mithila Food Agency - Premium Makhana</title>
-    <meta name="description" content="Discover Mithila Food Agency's authentic, hand-harvested makhana (fox nuts) from Bihar. A healthy, gluten-free, and protein-rich snack inspired by Maithili culture.">
+    <title>Mithila Food Agency - Premium Makhana from Bihar | Ancient Superfood</title>
+    <meta name="description" content="Discover Mithila Food Agency's authentic, hand-harvested makhana (fox nuts) from Bihar. A healthy, gluten-free, and protein-rich snack inspired by 3000+ years of Maithili culture and tradition.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -28,6 +28,7 @@
             --text-light: #666;
             --shadow: 0 4px 20px rgba(0,0,0,0.1);
             --gradient-bg: linear-gradient(135deg, var(--cream) 0%, #FFF3E0 50%, var(--warm-white) 100%);
+            --whatsapp-green: #25D366;
         }
 
         body {
@@ -41,7 +42,6 @@
             flex-direction: column;
         }
         
-        /* Main Content Wrapper for footer to stay at bottom */
         .page-wrapper {
             flex: 1;
         }
@@ -72,23 +72,35 @@
             gap: 1rem;
         }
 
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-red);
-            border-radius: 50%;
+        .logo {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: white;
-            border: 3px solid var(--primary-yellow);
+            font-size: 2rem;
+            font-weight: bold;
+            gap: 10px;
         }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+        }
+
         .logo-text {
             color: var(--primary-red);
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             font-size: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .ugna-text {
+            color: var(--primary-orange);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-top: -2px;
+            font-style: italic;
         }
 
         .nav-menu {
@@ -147,7 +159,7 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -160,9 +172,12 @@
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 3rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-buttons {
@@ -213,6 +228,454 @@
             color: var(--primary-red);
         }
 
+        /* Nutritionist Recommendation Section */
+        .nutritionist-section {
+            background: white;
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .nutritionist-badge {
+            background: linear-gradient(45deg, var(--accent-green), #4CAF50);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .nutritionist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .nutritionist-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            border-left: 5px solid var(--primary-red);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nutritionist-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(211,47,47,0.05), rgba(255,112,67,0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nutritionist-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .nutritionist-card:hover::before {
+            opacity: 1;
+        }
+
+        .nutritionist-icon {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nutritionist-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nutritionist-text {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            background: linear-gradient(135deg, var(--deep-brown), #3E2723);
+            color: white;
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="25" cy="75" r="1" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+        }
+
+        .comparison-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .comparison-table {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem 0;
+            overflow-x: auto;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .comparison-table th {
+            background: rgba(255,255,255,0.1);
+            font-weight: 600;
+            color: var(--primary-yellow);
+        }
+
+        .comparison-table .highlight {
+            background: rgba(249,168,37,0.2);
+            font-weight: 600;
+        }
+
+        /* Updated Product Cards */
+        .products-section {
+            background: white;
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .product-card {
+            background: var(--warm-white);
+            border-radius: 25px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            border: 2px solid rgba(211,47,47,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            border-color: var(--primary-orange);
+        }
+
+        .product-image {
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-bg);
+            border-radius: 15px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-orange);
+            border: 3px solid var(--primary-yellow);
+        }
+        
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .product-details {
+            background: white;
+            border-radius: 15px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--primary-red);
+        }
+
+        .detail-value {
+            color: var(--text-dark);
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin: 1.5rem 0;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .quantity-btn {
+            width: 35px;
+            height: 35px;
+            border: 2px solid var(--primary-orange);
+            background: white;
+            color: var(--primary-orange);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .quantity-btn:hover {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        .quantity-display {
+            min-width: 50px;
+            padding: 0.4rem 0.8rem;
+            border: 2px solid var(--primary-yellow);
+            border-radius: 20px;
+            background: var(--primary-yellow);
+            color: var(--deep-brown);
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-order-btn {
+            width: 100%;
+            background: var(--whatsapp-green);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .whatsapp-order-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced Blog Cards */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: var(--primary-orange);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .read-more-btn {
+            background: var(--primary-yellow);
+            color: var(--deep-brown);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        /* Heritage Section */
+        .heritage-section {
+            background: linear-gradient(135deg, var(--mithila-blue), #1565C0);
+            color: white;
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .heritage-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 20c-8 0-15 7-15 15s7 15 15 15 15-7 15-15-7-15-15-15zm-20 30c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm40 0c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10z" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .heritage-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .heritage-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .heritage-stat {
+            text-align: center;
+        }
+
+        .heritage-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-yellow);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .heritage-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
         /* Sections */
         .section {
             padding: 6rem 2rem;
@@ -258,406 +721,85 @@
             line-height: 1.6;
         }
 
-        /* Nutritionist Recommendation Section */
-        .why-section {
-            background: var(--warm-white);
-            border-radius: 30px;
-            padding: 4rem 2rem;
-            margin: 3rem 0;
-            box-shadow: var(--shadow);
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .benefit-card {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .benefit-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .benefit-subtitle {
-            color: var(--text-light);
-            font-size: 1rem;
-        }
-
-        /* Comparison Table */
-        .comparison-section {
-            background: white;
-            border-radius: 30px;
-            padding: 4rem 2rem;
-            margin: 3rem 0;
-            box-shadow: var(--shadow);
-        }
-
-        .comparison-table {
-            overflow-x: auto;
-            margin-top: 3rem;
-        }
-
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 500px;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1.5rem 1rem;
-            text-align: left;
-            border-bottom: 1px solid #E0E0E0;
-        }
-
-        .comparison-table th {
-            background: var(--cream);
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .comparison-table .highlight {
-            background: linear-gradient(135deg, #E8F5E8, #F1F8E9);
-            font-weight: 600;
-            color: var(--accent-green);
-        }
-
-        /* Story Card Styles */
-        .story-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .story-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.4s ease;
-            border: 1px solid rgba(211,47,47,0.1);
-            position: relative;
-        }
-
-        .story-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-        }
-
-        .story-image {
-            width: 100%;
-            height: 250px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Background images for stories */
-        .story-image.makhana-bowl {
-            background-image: url('https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3');
-        }
-
-        .story-image.makhana-plant {
-            background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3');
-        }
-
-        .story-image.makhana-kheer {
-            background-image: url('https://images.unsplash.com/photo-1571197119259-1ca0eda2baa8?ixlib=rb-4.0.3');
-        }
-
-        .story-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(211,47,47,0.7), rgba(255,112,67,0.7));
-        }
-
-        .story-content {
-            padding: 2.5rem;
-        }
-
-        .story-badge {
-            display: inline-block;
-            background: var(--primary-orange);
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .story-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .story-text {
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .read-more {
-            color: var(--primary-red);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .read-more:hover {
-            color: var(--primary-orange);
-            transform: translateX(5px);
-        }
-
-        /* Product Cards */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 25px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: all 0.4s ease;
-            border: 1px solid rgba(211,47,47,0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,168,38,0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.6s ease;
-            opacity: 0;
-        }
-
-        .product-card:hover::before {
-            animation: shimmer 1.5s ease-in-out;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-        }
-
-        .product-image {
-            width: 150px;
-            height: 150px;
-            background: var(--gradient-bg);
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: var(--primary-orange);
-            border: 5px solid var(--primary-yellow);
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        .product-image-placeholder {
-            font-size: 3rem;
-            color: var(--primary-orange);
-        }
-        
-        .product-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .product-price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            margin-bottom: 1rem;
-        }
-
-        .product-quantity {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            padding: 0.3rem 0.8rem;
-            background: var(--cream);
-            border-radius: 15px;
-            display: inline-block;
-        }
-
-        .product-description {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .product-processor {
-            font-size: 0.8rem;
-            color: var(--primary-orange);
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-
-        /* WhatsApp Buy Button */
-        .whatsapp-buy-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            background-color: #25D366;
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-top: 0.5rem;
-            width: 100%;
-            max-width: 200px;
-        }
-
-        .whatsapp-buy-btn:hover {
-            background-color: #128C7E;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        /* Delivery Partners */
-        .delivery-section {
+        /* Enhanced Information Cards */
+        .info-section {
             background: white;
             border-radius: 30px;
             padding: 4rem 2rem;
             margin: 4rem 0;
             box-shadow: var(--shadow);
-            text-align: center;
         }
-
-        .delivery-partners {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
             margin-top: 3rem;
         }
-
-        .delivery-partner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.5rem;
-            border-radius: 15px;
+        
+        .info-card {
+            background: linear-gradient(135deg, var(--cream), #FFF8E1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border-left: 5px solid var(--primary-red);
             transition: all 0.3s ease;
-            background: var(--cream);
         }
 
-        .delivery-partner:hover {
+        .info-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-
-        .delivery-icon {
-            width: 70px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
+        
+        .info-icon {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
         }
-
-        .delivery-name {
-            font-weight: 600;
+        
+        .info-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
             color: var(--text-dark);
-            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .info-text {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
-        /* Contact Form */
-        .contact-form {
+        /* Order Form Updates */
+        .order-form {
             background: white;
             border-radius: 25px;
-            padding: 3rem;
+            padding: 2.5rem;
             box-shadow: var(--shadow);
-            max-width: 700px;
+            max-width: 800px;
             margin: 4rem auto;
-            border: 1px solid rgba(211,47,47,0.1);
         }
 
         .form-group {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
             font-weight: 600;
             color: var(--deep-brown);
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 1.2rem;
+            padding: 1rem;
             border: 2px solid #E0E0E0;
-            border-radius: 15px;
-            font-size: 1rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
             font-family: inherit;
         }
@@ -670,9 +812,109 @@
             box-shadow: 0 0 0 3px rgba(255,112,67,0.1);
         }
 
-        .form-group textarea {
-            height: 140px;
-            resize: vertical;
+        .order-products-section {
+            background: var(--cream);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .product-selection {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .product-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .product-item:hover {
+            border-color: var(--primary-yellow);
+        }
+
+        .product-checkbox {
+            margin: 0;
+            transform: scale(1.2);
+        }
+
+        .product-info {
+            flex-grow: 1;
+        }
+
+        .product-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        .product-price-text {
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        .mobile-quantity {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Process Section Styles */
+        .process-section {
+            background: linear-gradient(135deg, var(--cream), #FFF3E0);
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .process-step {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            border-left: 5px solid var(--primary-red);
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .process-icon {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+        }
+
+        .process-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .process-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         /* Footer */
@@ -691,10 +933,14 @@
 
         .footer-logo {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--primary-yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
         }
 
         .footer-social {
@@ -705,8 +951,8 @@
         }
 
         .social-link {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: var(--primary-red);
             color: white;
             border-radius: 50%;
@@ -715,13 +961,22 @@
             justify-content: center;
             text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
 
         .social-link:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             background: var(--primary-yellow);
             color: var(--deep-brown);
+        }
+
+        .social-link.whatsapp {
+            background: var(--whatsapp-green);
+        }
+
+        .social-link.whatsapp:hover {
+            background: #128C7E;
+            color: white;
         }
 
         /* Page Navigation */
@@ -739,8 +994,8 @@
         }
 
         .nav-btn {
-            width: 65px;
-            height: 65px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             background: var(--primary-red);
             color: white;
@@ -749,9 +1004,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
+            text-decoration: none;
         }
 
         .nav-btn:hover {
@@ -759,23 +1015,13 @@
             background: var(--primary-orange);
         }
         
-        /* Floating Call Button */
-        .call-btn {
-            background-color: #007bb5; 
+        .nav-btn.whatsapp {
+            background-color: var(--whatsapp-green);
         }
         
-        .call-btn:hover {
-            background-color: #005f88;
-        }
-        
-        /* Floating WhatsApp Button */
-        .whatsapp-btn {
-            background-color: #25D366;
-        }
-        .whatsapp-btn:hover {
+        .nav-btn.whatsapp:hover {
             background-color: #128C7E;
         }
-
 
         /* Current Page Indicator */
         .current-page {
@@ -785,176 +1031,43 @@
         .current-page.show {
             display: block;
         }
-        
-        /* Order Page Specific Styles */
-        .order-summary {
-            background: var(--cream);
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border: 2px solid var(--primary-yellow);
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .order-total {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary-red);
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 2px solid var(--primary-orange);
-        }
-        .order-form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
-        /* Product Image and description grid */
-        .flavour-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-        .flavour-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-        .flavour-image {
-            width: 100%;
-            height: 200px;
-            background: #f0f0f0;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ccc;
-            font-size: 1.2rem;
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
         }
 
-        /* Article content for blog/about pages */
-        .article-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
+        .pulse {
+            animation: pulse 2s infinite;
         }
         
-        .article-content h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-red);
-            font-size: 1.8rem;
-            margin: 3rem 0 1.5rem 0;
-            line-height: 1.4;
+        .btn:focus,
+        .nav-menu a:focus,
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: 3px solid var(--primary-yellow);
+            outline-offset: 2px;
         }
 
-        .article-content p {
-            margin-bottom: 1.8rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-dark);
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, var(--cream), #FFF3E0);
-            border-left: 5px solid var(--primary-orange);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 3rem 0;
-        }
-
-        .highlight-box h4 {
-            color: var(--primary-red);
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-        }
-        
-        /* Makhana Info Section */
-        .makhana-info-section {
-            background: white;
-            border-radius: 30px;
-            padding: 4rem 2rem;
-            margin: 4rem 0;
-            box-shadow: var(--shadow);
-        }
-        
-        .makhana-info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .makhana-info-card {
-            background: var(--warm-white);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            border-left: 5px solid var(--primary-red);
-        }
-        
-        .makhana-info-icon {
-            font-size: 3rem;
-            color: var(--primary-red);
-            margin-bottom: 1.5rem;
-        }
-        
-        .makhana-info-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-        
-        .makhana-info-text {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        
-        .makhana-importance {
-            background: linear-gradient(135deg, var(--cream) 0%, #FFF3E0 100%);
-            padding: 3rem;
-            border-radius: 20px;
-            margin: 3rem 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: bold;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 50px;
-            width: auto;
-            border-radius: 8px; /* optional for rounded corners */
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: bold;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .footer-logo img {
-            height: 80px;
-            width: auto;
-            border-radius: 8px; /* optional for rounded corners */
-            
-        }
-        
         /* Mobile Styles */
         @media (max-width: 768px) {
             .nav-menu {
@@ -982,45 +1095,27 @@
             }
 
             .logo-text {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             .hero {
                 padding: 4rem 1rem;
             }
 
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
-
             .section {
                 padding: 4rem 1rem;
             }
             
-            .story-grid,
-            .products-grid {
+            .products-grid,
+            .blog-grid,
+            .info-grid,
+            .nutritionist-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
 
-            .benefits-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 2rem;
-            }
-
-            .delivery-partners {
-                gap: 2rem;
-            }
-
-            .contact-form {
-                padding: 2rem 1.5rem;
+            .order-form {
+                padding: 1.5rem;
                 margin: 2rem 1rem;
             }
 
@@ -1030,60 +1125,44 @@
             }
 
             .nav-btn {
-                width: 55px;
-                height: 55px;
+                width: 50px;
+                height: 50px;
+                font-size: 1rem;
             }
 
-            .comparison-table {
-                font-size: 0.9rem;
-            }
-
-            .order-form-grid {
-                grid-template-columns: 1fr !important;
-            }
-            
-            .flavour-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .product-card {
                 padding: 1.5rem;
             }
-            
-            .whatsapp-buy-btn {
-                padding: 0.7rem 1.2rem;
-                font-size: 0.9rem;
-            }
-        }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+            .product-image {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
-        @keyframes shimmer {
-            0% {
-                transform: translateX(-100%) translateY(-100%) rotate(45deg);
-                opacity: 0;
+            .quantity-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
             }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateX(100%) translateY(100%) rotate(45deg);
-                opacity: 0;
-            }
-        }
 
-        .fade-in {
-            animation: fadeInUp 0.6s ease-out;
+            .quantity-selector {
+                gap: 0.5rem;
+            }
+
+            .comparison-table {
+                padding: 1rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .heritage-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -1097,7 +1176,9 @@
                 <img src="assets/logo.png" alt="Mithila Food Agency Logo">
                 <div>
                     <div class="logo-text">Mithila Food Agency</div>
+                    <div class="ugna-text">~ उगना ~</div>
                 </div>
+                </h1>
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
@@ -1118,10 +1199,10 @@
         <section class="hero">
             <div class="hero-content fade-in">
                 <h1>Welcome to the Essence of Mithila</h1>
-                <p class="hero-subtitle">The ancient superfood your modern lifestyle needs. Discover premium makhana that bridges centuries of tradition with today's wellness goals, straight from the pristine ponds of Bihar.</p>
+                <p class="hero-subtitle">From the pristine lotus ponds of Mithila to your table - every kernel tells a story of purity, nutrition, and tradition. Experience the authentic taste of this ancient superfood that has nourished generations for over 3,000 years.</p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary" onclick="showOrderPage()">
-                        <i class="fas fa-shopping-cart"></i> Order Now
+                    <a href="#products" class="btn btn-primary" onclick="scrollToProducts()">
+                        <i class="fas fa-shopping-cart"></i> Shop Now
                     </a>
                     <a href="#" class="btn btn-secondary" onclick="scrollToInfo()">
                         <i class="fas fa-book-open"></i> Know More
@@ -1130,268 +1211,458 @@
             </div>
         </section>
 
-        <!-- Product Flavors Section -->
-        <section class="section" id="products" style="background: white;">
+        <!-- Heritage Section -->
+        <section class="section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <span class="section-badge">Premium Collection</span>
-                    <h2 class="section-title">Our Makhana Flavors</h2>
-                    <p class="section-subtitle">Handcrafted with love by traditional farmers of Mithila, each pack tells a story of generations of expertise and dedication to quality.</p>
-                </div>
-                <div class="flavour-grid">
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Plain Makhana</span>
+                <div class="heritage-section fade-in">
+                    <div class="heritage-content">
+                        <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">Ancient Wisdom</span>
+                        <h2 class="section-title" style="color: white;">The Mithila Difference</h2>
+                        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 3rem;">
+                            In the fertile wetlands of Bihar's Mithila region, this "white gold" grows naturally in the sacred lotus ponds, where generations of skilled farmers have perfected the art of harvesting these precious seeds.
+                        </p>
+                        <div class="heritage-stats">
+                            <div class="heritage-stat">
+                                <div class="heritage-number">3000+</div>
+                                <div class="heritage-label">Years of Ayurvedic Tradition</div>
+                            </div>
+                            <div class="heritage-stat">
+                                <div class="heritage-number">15+</div>
+                                <div class="heritage-label">Generations of Farmers</div>
+                            </div>
+                            <div class="heritage-stat">
+                                <div class="heritage-number">100%</div>
+                                <div class="heritage-label">Organic & Natural</div>
+                            </div>
+                            <div class="heritage-stat">
+                                <div class="heritage-number">0</div>
+                                <div class="heritage-label">Artificial Preservatives</div>
+                            </div>
                         </div>
-                        <h3 class="product-title">Plain Makhana</h3>
-                        <p class="product-price">₹250</p>
-                        <span class="product-quantity">100g Pack</span>
-                        <p class="product-description">Pure, unflavored makhana with its natural nutty taste. Perfect for cooking, making kheer, or enjoying as a light snack.</p>
-                        <p class="product-processor">Processor: Sourav Makhana and Co</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Plain Makhana (100g) for ₹250" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
                     </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Chat Masala</span>
-                        </div>
-                        <h3 class="product-title">Chat Masala</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A tangy and spicy blend of traditional chat masala to give you an authentic street food experience. Perfect for a savory treat.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Chat Masala Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Pudina Lemon</span>
-                        </div>
-                        <h3 class="product-title">Pudina Lemon</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A refreshing combination of mint and lemon that awakens your taste buds. Perfect for a light and zesty snack.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Pudina Lemon Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Salt & Pepper</span>
-                        </div>
-                        <h3 class="product-title">Salt & Pepper</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A classic combination of salt and freshly ground black pepper. Simple yet satisfying for those who enjoy traditional flavors.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Salt & Pepper Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Cocktail Chakna</span>
-                        </div>
-                        <h3 class="product-title">Cocktail Chakna</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A perfect blend of spices that makes it an ideal accompaniment for your evening snacks and beverages.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Cocktail Chakna Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Peri Peri</span>
-                        </div>
-                        <h3 class="product-title">Peri Peri</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A fiery and flavorful African-inspired spice blend for those who love a spicy kick in their snacks.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Peri Peri Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Makhana Info Section -->
-        <section class="makhana-info-section">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <span class="section-badge">Why Choose Us</span>
-                    <h2 class="section-title">The Mithila Makhana Difference</h2>
-                    <p class="section-subtitle">Experience the authentic taste and quality of makhana sourced directly from the heartland of Mithila</p>
-                </div>
-                
-                <div class="makhana-info-grid">
-                    <div class="makhana-info-card fade-in">
-                        <div class="makhana-info-icon">
-                            <i class="fas fa-seedling"></i>
-                        </div>
-                        <h3 class="makhana-info-title">100% Organic</h3>
-                        <p class="makhana-info-text">Our makhana is grown naturally without any pesticides or chemicals, ensuring you get the purest form of this superfood.</p>
-                    </div>
-                    
-                    <div class="makhana-info-card fade-in">
-                        <div class="makhana-info-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3 class="makhana-info-title">Nutrient Rich</h3>
-                        <p class="makhana-info-text">Packed with protein, fiber, and essential minerals while being low in calories, making it perfect for health-conscious individuals.</p>
-                    </div>
-                    
-                    <div class="makhana-info-card fade-in">
-                        <div class="makhana-info-icon">
-                            <i class="fas fa-tractor"></i>
-                        </div>
-                        <h3 class="makhana-info-title">Direct from Farmers</h3>
-                        <p class="makhana-info-text">We work directly with local farmers in Bihar, ensuring fair prices for them and the best quality products for you.</p>
-                    </div>
-                </div>
-                
-                <div class="makhana-importance fade-in">
-                    <h3 class="section-title" style="text-align: center; font-size: 2rem;">The Cultural Significance of Makhana in Mithila</h3>
-                    <p style="text-align: center; font-size: 1.1rem; margin-top: 1.5rem;">
-                        Makhana has been an integral part of Maithili culture for centuries. It's not just a snack but a symbol of prosperity and is often used in religious ceremonies and festivals. 
-                        The traditional methods of harvesting and processing have been passed down through generations, preserving the authentic taste and nutritional value.
-                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Nutritionist Recommendation Section -->
-        <section class="why-section">
+        <section class="section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <span class="section-badge">Health Benefits</span>
-                    <h2 class="section-title">Why Nutritionists Recommend Makhana</h2>
-                    <p class="section-subtitle">Discover the incredible health benefits that make makhana a superfood loved by nutritionists worldwide</p>
-                </div>
-                <div class="benefits-grid">
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-weight"></i>
-                        </div>
-                        <h3 class="benefit-title">Weight Management</h3>
-                        <p class="benefit-subtitle">Low in calories and high in fiber, makhana helps you feel full longer, reducing overall calorie intake.</p>
+                <div class="nutritionist-section fade-in">
+                    <div class="section-header">
+                        <span class="nutritionist-badge">Nutritionist Approved</span>
+                        <h2 class="section-title">Why Nutritionists Recommend Makhana</h2>
+                        <p class="section-subtitle">From the pristine lotus ponds of Mithila to your table - every kernel tells a story of purity, nutrition, and tradition</p>
                     </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-heartbeat"></i>
+                    
+                    <div class="nutritionist-grid">
+                        <div class="nutritionist-card fade-in">
+                            <div class="nutritionist-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="nutritionist-title">Low Glycemic Index</h3>
+                            <p class="nutritionist-text">Stable blood sugar, sustained energy for 3-4 hours. Perfect for diabetics and weight management programs.</p>
                         </div>
-                        <h3 class="benefit-title">Heart Health</h3>
-                        <p class="benefit-subtitle">Rich in antioxidants and low in saturated fat, makhana supports cardiovascular health and reduces cholesterol.</p>
-                    </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-bone"></i>
+                        
+                        <div class="nutritionist-card fade-in">
+                            <div class="nutritionist-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="nutritionist-title">Plant-Based Protein</h3>
+                            <p class="nutritionist-text">9.7g per 100g - Complete amino acid profile that supports muscle development and tissue repair.</p>
                         </div>
-                        <h3 class="benefit-title">Bone Strength</h3>
-                        <p class="benefit-subtitle">Excellent source of calcium, essential for maintaining strong bones and preventing osteoporosis.</p>
-                    </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-brain"></i>
+                        
+                        <div class="nutritionist-card fade-in">
+                            <div class="nutritionist-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="nutritionist-title">Heart Healthy</h3>
+                            <p class="nutritionist-text">Zero cholesterol, rich in magnesium & potassium. Supports cardiovascular health naturally.</p>
                         </div>
-                        <h3 class="benefit-title">Brain Function</h3>
-                        <p class="benefit-subtitle">Contains essential nutrients that support cognitive function and may help improve memory and focus.</p>
+                        
+                        <div class="nutritionist-card fade-in">
+                            <div class="nutritionist-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="nutritionist-title">Rich in Antioxidants</h3>
+                            <p class="nutritionist-text">Flavonoids & polyphenols for immune support and cellular protection against oxidative stress.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Comparison Table -->
-        <section class="comparison-section">
+        <!-- Comparison Section -->
+        <section class="section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <span class="section-badge">Nutritional Facts</span>
-                    <h2 class="section-title">Nutritional Comparison (Per 100g)</h2>
-                    <p class="section-subtitle">See how makhana compares to other popular snacks in terms of nutritional value</p>
-                </div>
-                <div class="comparison-table fade-in">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nutrient</th>
-                                <th>Makhana</th>
-                                <th>Potato Chips</th>
-                                <th>Popcorn</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Calories</td>
-                                <td class="highlight">350 kcal</td>
-                                <td>536 kcal</td>
-                                <td>387 kcal</td>
-                            </tr>
-                            <tr>
-                                <td>Protein</td>
-                                <td class="highlight">9.7g</td>
-                                <td>7.0g</td>
-                                <td>12.9g</td>
-                            </tr>
-                            <tr>
-                                <td>Carbohydrates</td>
-                                <td>77.0g</td>
-                                <td>52.9g</td>
-                                <td>77.8g</td>
-                            </tr>
-                            <tr>
-                                <td>Fat</td>
-                                <td class="highlight">0.1g</td>
-                                <td>35.2g</td>
-                                <td>4.5g</td>
-                            </tr>
-                            <tr>
-                                <td>Fiber</td>
-                                <td class="highlight">7.6g</td>
-                                <td>4.5g</td>
-                                <td>14.5g</td>
-                            </tr>
-                            <tr>
-                                <td>Sugar</td>
-                                <td class="highlight">0.0g</td>
-                                <td>0.3g</td>
-                                <td>0.9g</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="comparison-section fade-in">
+                    <div class="comparison-content">
+                        <div class="section-header">
+                            <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">Nutritional Analysis</span>
+                            <h2 class="section-title" style="color: white;">Makhana vs Other Snacks</h2>
+                            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">See why nutritionists choose makhana over traditional snacks</p>
+                        </div>
+                        
+                        <div class="comparison-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nutrient (per 100g)</th>
+                                        <th class="highlight">Makhana</th>
+                                        <th>Almonds</th>
+                                        <th>Potato Chips</th>
+                                        <th>Popcorn</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Calories</strong></td>
+                                        <td class="highlight">347</td>
+                                        <td>579</td>
+                                        <td>536</td>
+                                        <td>387</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Protein (g)</strong></td>
+                                        <td class="highlight">9.7</td>
+                                        <td>21.1</td>
+                                        <td>6.6</td>
+                                        <td>12.9</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fat (g)</strong></td>
+                                        <td class="highlight">0.1</td>
+                                        <td>49.9</td>
+                                        <td>34.6</td>
+                                        <td>4.3</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Carbs (g)</strong></td>
+                                        <td class="highlight">76.9</td>
+                                        <td>21.6</td>
+                                        <td>49.7</td>
+                                        <td>77.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Cholesterol</strong></td>
+                                        <td class="highlight">0 mg</td>
+                                        <td>0 mg</td>
+                                        <td>0 mg</td>
+                                        <td>0 mg</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Sodium (mg)</strong></td>
+                                        <td class="highlight">1</td>
+                                        <td>1</td>
+                                        <td>525</td>
+                                        <td>7</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <p style="text-align: center; opacity: 0.9; margin-top: 2rem;">
+                            <em>Makhana stands out with the lowest fat content and minimal sodium, making it the ideal healthy snack choice.</em>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Delivery Partners -->
-        <section class="delivery-section">
+        <!-- Process Section -->
+        <section class="section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <span class="section-badge">Delivery</span>
-                    <h2 class="section-title">Our Delivery Partners</h2>
-                    <p class="section-subtitle">We deliver across India through trusted partners to ensure your order reaches you fresh and on time</p>
+                <div class="process-section fade-in">
+                    <div class="section-header">
+                        <span class="section-badge">Our Process</span>
+                        <h2 class="section-title">From Pond to Package</h2>
+                        <p class="section-subtitle">Discover the traditional methods that make our makhana special</p>
+                    </div>
+                    
+                    <div class="process-steps">
+                        <div class="process-step fade-in">
+                            <div class="process-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <h3 class="process-title">Natural Harvesting</h3>
+                            <p class="process-description">Our makhana is hand-harvested from the pristine ponds of Bihar, ensuring the highest quality and purity.</p>
+                        </div>
+                        
+                        <div class="process-step fade-in">
+                            <div class="process-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3 class="process-title">Traditional Roasting</h3>
+                            <p class="process-description">We use traditional methods to roast our makhana, preserving its natural nutrients and authentic flavor.</p>
+                        </div>
+                        
+                        <div class="process-step fade-in">
+                            <div class="process-icon">
+                                <i class="fas fa-hand-paper"></i>
+                            </div>
+                            <h3 class="process-title">Hand-Selected Quality</h3>
+                            <p class="process-description">Each kernel is carefully inspected to ensure only the best quality makhana reaches your home.</p>
+                        </div>
+                        
+                        <div class="process-step fade-in">
+                            <div class="process-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h3 class="process-title">Direct to Your Door</h3>
+                            <p class="process-description">We deliver fresh from our farms to your family, ensuring peak quality and eliminating middlemen.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="delivery-partners fade-in">
-                    <div class="delivery-partner">
-                        <div class="delivery-icon">DT</div>
-                        <span class="delivery-name">Delhivery</span>
+            </div>
+        </section>
+
+        <!-- Enhanced Product Section -->
+        <section class="section" id="products">
+            <div class="container">
+                <div class="products-section fade-in">
+                    <div class="section-header">
+                        <span class="section-badge">Premium Collection</span>
+                        <h2 class="section-title">Our Makhana Flavors</h2>
+                        <p class="section-subtitle">Handcrafted with love by traditional farmers of Mithila, each pack tells a story of generations of expertise and dedication to quality.</p>
                     </div>
-                    <div class="delivery-partner">
-                        <div class="delivery-icon">BF</div>
-                        <span class="delivery-name">Blue Dart</span>
+                    <div class="products-grid">
+                        <!-- Premium Quality Plain Makhana -->
+                        <div class="product-card fade-in" data-product="Premium Quality Plain" data-price="350" data-weight="100">
+                            <div class="product-image">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="product-title">Premium Quality Plain</h3>
+                            <p class="product-description">Pure, unflavored makhana with its natural nutty taste. Perfect for cooking, making kheer, or enjoying as a light snack. Hand-harvested from pristine Bihar ponds.</p>
+                            <div class="product-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Weight:</span>
+                                    <span class="detail-value">100g</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Processor:</span>
+                                    <span class="detail-value">Sourav Makhana & Co</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Type:</span>
+                                    <span class="detail-value">100% Organic</span>
+                                </div>
+                            </div>
+                            <p class="product-price">₹350</p>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                            </div>
+                            <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </button>
+                        </div>
+
+                        <!-- Chat Masala -->
+                        <div class="product-card fade-in" data-product="Chat Masala" data-price="280" data-weight="45">
+                            <div class="product-image">
+                                <i class="fas fa-pepper-hot"></i>
+                            </div>
+                            <h3 class="product-title">Chat Masala</h3>
+                            <p class="product-description">A tangy and spicy blend of traditional chat masala to give you an authentic street food experience. Perfect for a savory treat that awakens your taste buds.</p>
+                            <div class="product-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Weight:</span>
+                                    <span class="detail-value">45g</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Processor:</span>
+                                    <span class="detail-value">Taruwar Agro Industries</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Flavor:</span>
+                                    <span class="detail-value">Tangy & Spicy</span>
+                                </div>
+                            </div>
+                            <p class="product-price">₹280</p>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                            </div>
+                            <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </button>
+                        </div>
+
+                        <!-- Pudina Lemon -->
+                        <div class="product-card fade-in" data-product="Pudina Lemon" data-price="280" data-weight="45">
+                            <div class="product-image">
+                                <i class="fas fa-lemon"></i>
+                            </div>
+                            <h3 class="product-title">Pudina Lemon</h3>
+                            <p class="product-description">A refreshing combination of mint and lemon that awakens your taste buds. Perfect for a light and zesty snack that provides natural freshness.</p>
+                            <div class="product-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Weight:</span>
+                                    <span class="detail-value">45g</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Processor:</span>
+                                    <span class="detail-value">Taruwar Agro Industries</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Flavor:</span>
+                                    <span class="detail-value">Mint & Lemon</span>
+                                </div>
+                            </div>
+                            <p class="product-price">₹280</p>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                            </div>
+                            <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </button>
+                        </div>
+
+                        <!-- Salt and Pepper -->
+                        <div class="product-card fade-in" data-product="Salt and Pepper" data-price="270" data-weight="45">
+                            <div class="product-image">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="product-title">Salt and Pepper</h3>
+                            <p class="product-description">Classic seasoning with the perfect balance of salt and pepper. A timeless flavor that enhances the natural taste of makhana without overpowering it.</p>
+                            <div class="product-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Weight:</span>
+                                    <span class="detail-value">45g</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Processor:</span>
+                                    <span class="detail-value">Taruwar Agro Industries</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Flavor:</span>
+                                    <span class="detail-value">Classic</span>
+                                </div>
+                            </div>
+                            <p class="product-price">₹270</p>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                            </div>
+                            <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </button>
+                        </div>
+
+                        <!-- Cocktail Chakna -->
+                        <div class="product-card fade-in" data-product="Cocktail Chakna" data-price="300" data-weight="45">
+                            <div class="product-image">
+                                <i class="fas fa-cocktail"></i>
+                            </div>
+                            <h3 class="product-title">Cocktail Chakna</h3>
+                            <p class="product-description">Perfect party mix flavor that combines multiple spices for an exciting taste experience. Ideal as an accompaniment for evening gatherings and celebrations.</p>
+                            <div class="product-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Weight:</span>
+                                    <span class="detail-value">45g</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Processor:</span>
+                                    <span class="detail-value">Taruwar Agro Industries</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Flavor:</span>
+                                    <span class="detail-value">Party Mix</span>
+                                </div>
+                            </div>
+                            <p class="product-price">₹300</p>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                            </div>
+                            <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </button>
+                        </div>
+
+                        <!-- Peri Peri -->
+                        <div class="product-card fade-in" data-product="Peri Peri" data-price="290" data-weight="45">
+                            <div class="product-image">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3 class="product-title">Peri Peri</h3>
+                            <p class="product-description">Fiery and flavorful peri peri seasoning for those who love a spicy kick. Made with authentic peri peri spice blend that delivers heat with flavor.</p>
+                            <div class="product-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Weight:</span>
+                                    <span class="detail-value">45g</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Processor:</span>
+                                    <span class="detail-value">Taruwar Agro Industries</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Flavor:</span>
+                                    <span class="detail-value">Spicy Hot</span>
+                                </div>
+                            </div>
+                            <p class="product-price">₹290</p>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                            </div>
+                            <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </button>
+                        </div>
                     </div>
-                    <div class="delivery-partner">
-                        <div class="delivery-icon">AM</div>
-                        <span class="delivery-name">Amazon</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Information Section -->
+        <section class="section" id="makhana-info">
+            <div class="container">
+                <div class="info-section fade-in">
+                    <div class="section-header">
+                        <span class="section-badge">Health Benefits</span>
+                        <h2 class="section-title">The Miracle of Makhana</h2>
+                        <p class="section-subtitle">Discover the incredible health benefits that make makhana a superfood loved by nutritionists worldwide</p>
                     </div>
-                    <div class="delivery-partner">
-                        <div class="delivery-icon">FK</div>
-                        <span class="delivery-name">Flipkart</span>
+                    
+                    <div class="info-grid">
+                        <div class="info-card fade-in">
+                            <div class="info-icon">
+                                <i class="fas fa-weight"></i>
+                            </div>
+                            <h3 class="info-title">Weight Management</h3>
+                            <p class="info-text">Low in calories and high in fiber, makhana helps you feel full longer, reducing overall calorie intake and supporting healthy weight management.</p>
+                        </div>
+                        
+                        <div class="info-card fade-in">
+                            <div class="info-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3 class="info-title">Heart Health</h3>
+                            <p class="info-text">Rich in magnesium and potassium, makhana helps regulate blood pressure and supports cardiovascular health without adding cholesterol.</p>
+                        </div>
+                        
+                        <div class="info-card fade-in">
+                            <div class="info-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="info-title">Brain Function</h3>
+                            <p class="info-text">The antioxidants in makhana help protect brain cells from oxidative stress, supporting cognitive function and memory retention.</p>
+                        </div>
+                        
+                        <div class="info-card fade-in">
+                            <div class="info-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <h3 class="info-title">Bone Strength</h3>
+                            <p class="info-text">Packed with calcium and other minerals, makhana contributes to maintaining strong bones and preventing osteoporosis.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1400,174 +1671,247 @@
 
     <!-- Order Page -->
     <div class="current-page" id="order">
-        <section class="section" style="background: white;">
+        <section class="section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <span class="section-badge">Order Now</span>
-                    <h2 class="section-title">Place Your Order</h2>
-                    <p class="section-subtitle">Select from our premium range of makhana products and place your order directly via WhatsApp</p>
-                </div>
-                
-                <div class="flavour-grid">
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Plain Makhana</span>
-                        </div>
-                        <h3 class="product-title">Plain Makhana</h3>
-                        <p class="product-price">₹250</p>
-                        <span class="product-quantity">100g Pack</span>
-                        <p class="product-description">Pure, unflavored makhana with its natural nutty taste. Perfect for cooking, making kheer, or enjoying as a light snack.</p>
-                        <p class="product-processor">Processor: Sourav Makhana and Co</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Plain Makhana (100g) for ₹250" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
+                <div class="order-form fade-in">
+                    <div class="section-header">
+                        <span class="section-badge">Place Your Order</span>
+                        <h2 class="section-title">Order Mithila Makhana</h2>
+                        <p class="section-subtitle">Fill out the form below and we'll contact you to confirm your order</p>
                     </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Chat Masala</span>
+                    
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
                         </div>
-                        <h3 class="product-title">Chat Masala</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A tangy and spicy blend of traditional chat masala to give you an authentic street food experience. Perfect for a savory treat.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Chat Masala Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Pudina Lemon</span>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your WhatsApp number">
                         </div>
-                        <h3 class="product-title">Pudina Lemon</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A refreshing combination of mint and lemon that awakens your taste buds. Perfect for a light and zesty snack.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Pudina Lemon Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Salt & Pepper</span>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
                         </div>
-                        <h3 class="product-title">Salt & Pepper</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A classic combination of salt and freshly ground black pepper. Simple yet satisfying for those who enjoy traditional flavors.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Salt & Pepper Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Cocktail Chakna</span>
+                        
+                        <div class="form-group">
+                            <label for="address">Delivery Address</label>
+                            <textarea id="address" name="address" rows="3" required placeholder="Enter your complete delivery address"></textarea>
                         </div>
-                        <h3 class="product-title">Cocktail Chakna</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A perfect blend of spices that makes it an ideal accompaniment for your evening snacks and beverages.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Cocktail Chakna Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
-                    <div class="product-card fade-in">
-                        <div class="product-image">
-                            <span class="product-image-placeholder">Peri Peri</span>
+                        
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required placeholder="Enter your city">
                         </div>
-                        <h3 class="product-title">Peri Peri</h3>
-                        <p class="product-price">₹280</p>
-                        <span class="product-quantity">45g Pack</span>
-                        <p class="product-description">A fiery and flavorful African-inspired spice blend for those who love a spicy kick in their snacks.</p>
-                        <p class="product-processor">Processor: Taruwar Agro Industries</p>
-                        <a href="https://wa.me/919930315235?text=Hi! I'd like to order Peri Peri Makhana (45g) for ₹280" class="whatsapp-buy-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Buy on WhatsApp
-                        </a>
-                    </div>
+                        
+                        <div class="form-group">
+                            <label for="pincode">Pincode</label>
+                            <input type="text" id="pincode" name="pincode" required placeholder="Enter your area pincode">
+                        </div>
+                        
+                        <div class="order-products-section">
+                            <h3>Select Products</h3>
+                            <div class="product-selection">
+                                <div class="product-item">
+                                    <input type="checkbox" class="product-checkbox" id="product1" name="products" value="Premium Quality Plain" data-price="350">
+                                    <div class="product-info">
+                                        <div class="product-name">Premium Quality Plain (100g)</div>
+                                        <div class="product-price-text">₹350</div>
+                                    </div>
+                                    <div class="mobile-quantity">
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-item">
+                                    <input type="checkbox" class="product-checkbox" id="product2" name="products" value="Chat Masala" data-price="280">
+                                    <div class="product-info">
+                                        <div class="product-name">Chat Masala (45g)</div>
+                                        <div class="product-price-text">₹280</div>
+                                    </div>
+                                    <div class="mobile-quantity">
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-item">
+                                    <input type="checkbox" class="product-checkbox" id="product3" name="products" value="Pudina Lemon" data-price="280">
+                                    <div class="product-info">
+                                        <div class="product-name">Pudina Lemon (45g)</div>
+                                        <div class="product-price-text">₹280</div>
+                                    </div>
+                                    <div class="mobile-quantity">
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-item">
+                                    <input type="checkbox" class="product-checkbox" id="product4" name="products" value="Salt and Pepper" data-price="270">
+                                    <div class="product-info">
+                                        <div class="product-name">Salt and Pepper (45g)</div>
+                                        <div class="product-price-text">₹270</div>
+                                    </div>
+                                    <div class="mobile-quantity">
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-item">
+                                    <input type="checkbox" class="product-checkbox" id="product5" name="products" value="Cocktail Chakna" data-price="300">
+                                    <div class="product-info">
+                                        <div class="product-name">Cocktail Chakna (45g)</div>
+                                        <div class="product-price-text">₹300</div>
+                                    </div>
+                                    <div class="mobile-quantity">
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-item">
+                                    <input type="checkbox" class="product-checkbox" id="product6" name="products" value="Peri Peri" data-price="290">
+                                    <div class="product-info">
+                                        <div class="product-name">Peri Peri (45g)</div>
+                                        <div class="product-price-text">₹290</div>
+                                    </div>
+                                    <div class="mobile-quantity">
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                        <span class="quantity-display">1</span>
+                                        <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Special Instructions (Optional)</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Any special delivery instructions or requests"></textarea>
+                        </div>
+                        
+                        <div class="total-section" style="text-align: center; margin: 2rem 0;">
+                            <h3>Total: ₹<span id="orderTotal">0</span></h3>
+                        </div>
+                        
+                        <button type="submit" class="whatsapp-order-btn" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                            <i class="fab fa-whatsapp"></i> Place Order via WhatsApp
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- About Page -->
+    <!-- About Us Page -->
     <div class="current-page" id="about">
-        <section class="section" style="background: white;">
+        <section class="section">
             <div class="container">
                 <div class="section-header fade-in">
                     <span class="section-badge">Our Story</span>
                     <h2 class="section-title">About Mithila Food Agency</h2>
-                    <p class="section-subtitle">Discover the rich heritage and passion behind our authentic makhana products</p>
+                    <p class="section-subtitle">Preserving tradition while nourishing modern lives</p>
                 </div>
                 
-                <div class="article-content fade-in">
-                    <h3>Our Journey</h3>
-                    <p>Mithila Food Agency was born out of a deep appreciation for the traditional superfood - makhana, and a desire to share its incredible health benefits with the world. Our journey began in the heart of Mithila, where makhana has been cultivated for centuries using time-honored techniques.</p>
-                    
-                    <div class="highlight-box">
-                        <h4>Our Mission</h4>
-                        <p>To bring the authentic taste and nutritional benefits of Mithila's makhana to households across India while supporting local farmers and preserving traditional agricultural practices.</p>
+                <div class="info-grid">
+                    <div class="info-card fade-in">
+                        <div class="info-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3 class="info-title">Our Heritage</h3>
+                        <p class="info-text">For generations, our family has cultivated makhana in the pristine wetlands of Mithila, preserving traditional methods that ensure the highest quality product.</p>
                     </div>
                     
-                    <h3>Why Choose Our Makhana?</h3>
-                    <p>Unlike mass-produced alternatives, our makhana is carefully sourced from small-scale farmers in Bihar who use sustainable farming methods. Each batch is hand-harvested, sun-dried, and carefully processed to retain its natural goodness and nutritional value.</p>
+                    <div class="info-card fade-in">
+                        <div class="info-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="info-title">Sustainable Farming</h3>
+                        <p class="info-text">We practice eco-friendly farming techniques that respect the delicate wetland ecosystem while providing livelihood to local farming communities.</p>
+                    </div>
                     
-                    <h3>Our Commitment to Quality</h3>
-                    <p>We maintain strict quality control measures at every stage - from sourcing to packaging. Our products are 100% organic, free from artificial preservatives, and packed with care to ensure they reach you in perfect condition.</p>
+                    <div class="info-card fade-in">
+                        <div class="info-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="info-title">Quality Commitment</h3>
+                        <p class="info-text">Every batch of our makhana undergoes rigorous quality checks to ensure you receive only the finest, most nutritious product possible.</p>
+                    </div>
                     
-                    <h3>Supporting Local Communities</h3>
-                    <p>By working directly with local farmers, we ensure they receive fair compensation for their produce. This not only helps preserve traditional farming practices but also contributes to the economic development of rural communities in the Mithila region.</p>
+                    <div class="info-card fade-in">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="info-title">Community Impact</h3>
+                        <p class="info-text">By supporting local farmers and preserving traditional practices, we contribute to the economic and cultural sustainability of the Mithila region.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Blog Page -->
+    <!-- Blog & Recipes Page -->
     <div class="current-page" id="blog">
-        <section class="section" style="background: white;">
+        <section class="section">
             <div class="container">
                 <div class="section-header fade-in">
-                    <span class="section-badge">Recipes & More</span>
-                    <h2 class="section-title">Makhana Recipes & Blog</h2>
-                    <p class="section-subtitle">Discover delicious recipes, health tips, and the latest news about makhana</p>
+                    <span class="section-badge">Learn & Cook</span>
+                    <h2 class="section-title">Makhana Blog & Recipes</h2>
+                    <p class="section-subtitle">Discover delicious ways to enjoy makhana and learn about its health benefits</p>
                 </div>
                 
-                <div class="story-grid">
-                    <div class="story-card fade-in">
-                        <div class="story-image makhana-bowl">
-                            <i class="fas fa-utensils"></i>
+                <div class="blog-grid">
+                    <div class="blog-card fade-in">
+                        <div class="blog-image">
+                            <i class="fas fa-utensils" style="color: white; font-size: 3rem;"></i>
                         </div>
-                        <div class="story-content">
-                            <span class="story-badge">Recipe</span>
-                            <h3 class="story-title">Traditional Makhana Kheer</h3>
-                            <p class="story-text">Learn how to make the classic Maithili dessert that's not only delicious but also packed with nutrients. Perfect for festivals and special occasions.</p>
-                            <a href="#" class="read-more">Read Recipe <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="story-card fade-in">
-                        <div class="story-image makhana-plant">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                        <div class="story-content">
-                            <span class="story-badge">Health</span>
-                            <h3 class="story-title">5 Reasons to Include Makhana in Your Diet</h3>
-                            <p class="story-text">Discover the science-backed health benefits of makhana and why nutritionists are calling it the next superfood for modern lifestyles.</p>
-                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <div class="blog-content">
+                            <span class="blog-category">Recipe</span>
+                            <h3 class="blog-title">Traditional Makhana Kheer</h3>
+                            <p class="blog-excerpt">Learn how to make the classic Indian dessert using our premium quality makhana for a rich, creamy texture and authentic flavor.</p>
+                            <div class="blog-meta">
+                                <span>10 min read</span>
+                                <a href="https://www.vegrecipesofindia.com/makhane-ki-kheer/" class="read-more-btn">Read More</a>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="story-card fade-in">
-                        <div class="story-image makhana-kheer">
-                            <i class="fas fa-history"></i>
+                    <div class="blog-card fade-in">
+                        <div class="blog-image">
+                            <i class="fas fa-heart" style="color: white; font-size: 3rem;"></i>
                         </div>
-                        <div class="story-content">
-                            <span class="story-badge">Culture</span>
-                            <h3 class="story-title">The Cultural Significance of Makhana in Mithila</h3>
-                            <p class="story-text">Explore how makhana has been an integral part of Maithili culture for centuries, from religious ceremonies to traditional medicine.</p>
-                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <div class="blog-content">
+                            <span class="blog-category">Health</span>
+                            <h3 class="blog-title">Reasons to Choose Makhana Over Other Snacks</h3>
+                            <p class="blog-excerpt">Discover why nutritionists worldwide are recommending makhana as the ultimate healthy snack alternative.</p>
+                            <div class="blog-meta">
+                                <span>8 min read</span>
+                                <a href="https://www.apollo247.com/blog/article/makhana-benefits-traditional-superfood-and-a-healthy-snacking-alternative" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-card fade-in">
+                        <div class="blog-image">
+                            <i class="fas fa-leaf" style="color: white; font-size: 3rem;"></i>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Sustainability</span>
+                            <h3 class="blog-title">The Eco-Friendly Journey of Makhana</h3>
+                            <p class="blog-excerpt">Explore how makhana farming supports wetland conservation and sustainable agricultural practices in Bihar.</p>
+                            <div class="blog-meta">
+                                <span>12 min read</span>
+                                <a href="https://www.myvishglobal.com/how-makhana-supports-sustainable-farming-in-bihar/" class="read-more-btn">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1577,65 +1921,69 @@
 
     <!-- Contact Page -->
     <div class="current-page" id="contact">
-        <section class="section" style="background: white;">
+        <section class="section">
             <div class="container">
-                <div class="section-header fade-in">
-                    <span class="section-badge">Get in Touch</span>
-                    <h2 class="section-title">Contact Us</h2>
-                    <p class="section-subtitle">We'd love to hear from you. Reach out to us for orders, queries, or collaborations.</p>
-                </div>
-                
-                <div class="contact-form fade-in">
+                <div class="order-form fade-in">
+                    <div class="section-header">
+                        <span class="section-badge">Get In Touch</span>
+                        <h2 class="section-title">Contact Us</h2>
+                        <p class="section-subtitle">Have questions or want to place a bulk order? Reach out to us!</p>
+                    </div>
+                    
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" name="name" required placeholder="Enter your full name">
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="phone" required placeholder="Enter your WhatsApp number">
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="Enter your email">
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="product-inquiry">Product Inquiry</option>
+                                <option value="bulk-order">Bulk Order</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="whatsapp-order-btn" style="font-size: 1.1rem; padding: 1rem 2rem;">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
-                </div>
-                
-                <div class="delivery-partners fade-in" style="margin-top: 5rem;">
-                    <div class="delivery-partner" style="background: var(--cream); padding: 2rem;">
-                        <div class="delivery-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3 style="margin: 1rem 0 0.5rem;">Address</h3>
-                        <p style="color: var(--text-light);">204, Serena C, Casabella, Palava City Phase 1, Kalyan Shil Road, Dombivali East, Thane, Maharashtra, 421204</p>
-                    </div>
                     
-                    <div class="delivery-partner" style="background: var(--cream); padding: 2rem;">
-                        <div class="delivery-icon">
-                            <i class="fas fa-phone"></i>
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <h3>Connect With Us</h3>
+                        <div class="footer-social">
+                            <a href="#" class="social-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
                         </div>
-                        <h3 style="margin: 1rem 0 0.5rem;">Phone</h3>
-                        <p style="color: var(--text-light);">9930315235</p>
-                    </div>
-                    
-                    <div class="delivery-partner" style="background: var(--cream); padding: 2rem;">
-                        <div class="delivery-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3 style="margin: 1rem 0 0.5rem;">Email</h3>
-                        <p style="color: var(--text-light);">Mithilafoodagency@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -1646,144 +1994,248 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="assets/logo.png" alt="Mithila Food Agency Logo">
-                <div>
-                    <div class="footer-logo">Mithila Food Agency</div>
-                </div>
+                <img src="assets/logo.png" alt="Mithila Food Agency Logo" style="height: 40px;">
+                Mithila Food Agency
             </div>
-            <p style="margin: 1.5rem 0; opacity: 0.8;">Bringing the authentic taste of Mithila to your doorstep</p>
+            <p>Bringing the ancient superfood from the heart of Mithila to your home</p>
             
             <div class="footer-social">
+                <a href="#" class="social-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
                 <a href="#" class="social-link">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href="#" class="social-link">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
                 </a>
                 <a href="#" class="social-link">
-                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-twitter"></i>
                 </a>
             </div>
             
-            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2023 Mithila Food Agency. All rights reserved.</p>
-                <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">FSSAI License No.: 20250315107099173 | Made in India</p>
-            </div>
+            <p>&copy; 2023 Mithila Food Agency. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Page Navigation -->
     <div class="page-nav">
         <div class="nav-buttons">
-            <button class="nav-btn whatsapp-btn" onclick="window.open('https://wa.me/919930315235?text=Hi! I am interested in your makhana products.', '_blank')">
+            <a href="#" class="nav-btn whatsapp">
                 <i class="fab fa-whatsapp"></i>
-            </button>
-            <button class="nav-btn call-btn" onclick="window.location.href='tel:+919930315235'">
-                <i class="fas fa-phone"></i>
+            </a>
+            <button class="nav-btn" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up"></i>
             </button>
         </div>
     </div>
 
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize animations
+            initAnimations();
+            
+            // Initialize navigation
+            initNavigation();
+            
+            // Initialize mobile menu
+            initMobileMenu();
+            
+            // Initialize order form
+            initOrderForm();
+            
+            // Make body visible
+            document.body.style.opacity = 1;
         });
-        
-        // Page Navigation
-        const navLinks = document.querySelectorAll('.nav-link');
-        const currentPages = document.querySelectorAll('.current-page');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetPage = link.getAttribute('data-page');
-                
-                // Hide all pages
-                currentPages.forEach(page => {
-                    page.classList.remove('show');
+
+        // Initialize animations
+        function initAnimations() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
                 });
-                
-                // Show target page
-                document.getElementById(targetPage).classList.add('show');
-                
-                // Update active link
-                navLinks.forEach(navLink => {
-                    navLink.classList.remove('active');
-                });
-                link.classList.add('active');
-                
-                // Close mobile menu if open
-                navMenu.classList.remove('active');
-                
-                // Scroll to top
-                window.scrollTo(0, 0);
-            });
-        });
-        
-        // Show Order Page
-        function showOrderPage() {
-            // Hide all pages
-            currentPages.forEach(page => {
-                page.classList.remove('show');
-            });
+            }, { threshold: 0.1 });
             
-            // Show order page
-            document.getElementById('order').classList.add('show');
-            
-            // Update active link
-            navLinks.forEach(navLink => {
-                navLink.classList.remove('active');
-                if (navLink.getAttribute('data-page') === 'order') {
-                    navLink.classList.add('active');
-                }
+            fadeElements.forEach(element => {
+                observer.observe(element);
             });
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
         }
-        
-        // Scroll to Info Section
-        function scrollToInfo() {
-            const infoSection = document.getElementById('products');
-            if (infoSection) {
-                infoSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Initialize navigation
+        function initNavigation() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const currentPages = document.querySelectorAll('.current-page');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetPage = this.getAttribute('data-page');
+                    
+                    // Hide all pages
+                    currentPages.forEach(page => {
+                        page.classList.remove('show');
+                    });
+                    
+                    // Show target page
+                    document.getElementById(targetPage).classList.add('show');
+                    
+                    // Update active link
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+        }
+
+        // Initialize mobile menu
+        function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (mobileMenuBtn && navMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.innerHTML = navMenu.classList.contains('active') ? 
+                        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                });
             }
         }
-        
-        // Form Submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thank you for your message! We will get back to you soon.');
-                contactForm.reset();
+
+        // Initialize order form
+        function initOrderForm() {
+            const orderForm = document.getElementById('orderForm');
+            const checkboxes = document.querySelectorAll('.product-checkbox');
+            
+            if (orderForm) {
+                orderForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    submitOrderForm();
+                });
+            }
+            
+            // Update total when checkboxes change
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateOrderTotal);
             });
+            
+            // Initial total update
+            updateOrderTotal();
         }
-        
-        // Animate elements on scroll
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
+
+        // Change quantity for product cards
+        function changeQuantity(button, delta) {
+            const quantityDisplay = button.parentElement.querySelector('.quantity-display');
+            let quantity = parseInt(quantityDisplay.textContent);
+            quantity = Math.max(1, quantity + delta);
+            quantityDisplay.textContent = quantity;
+        }
+
+        // Change quantity for order form
+        function changeOrderQuantity(button, delta) {
+            const quantityDisplay = button.parentElement.querySelector('.quantity-display');
+            let quantity = parseInt(quantityDisplay.textContent);
+            quantity = Math.max(1, quantity + delta);
+            quantityDisplay.textContent = quantity;
+            updateOrderTotal();
+        }
+
+        // Update order total
+        function updateOrderTotal() {
+            let total = 0;
+            const checkboxes = document.querySelectorAll('.product-checkbox:checked');
+            
+            checkboxes.forEach(checkbox => {
+                const quantity = parseInt(checkbox.closest('.product-item').querySelector('.quantity-display').textContent);
+                const price = parseInt(checkbox.getAttribute('data-price'));
+                total += quantity * price;
             });
-        }, observerOptions);
-        
-        // Observe all elements with the 'fade-in' class
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+            
+            document.getElementById('orderTotal').textContent = total;
+        }
+
+        // Submit order form
+        function submitOrderForm() {
+            const form = document.getElementById('orderForm');
+            const formData = new FormData(form);
+            const products = [];
+            
+            document.querySelectorAll('.product-checkbox:checked').forEach(checkbox => {
+                const quantity = parseInt(checkbox.closest('.product-item').querySelector('.quantity-display').textContent);
+                products.push({
+                    name: checkbox.value,
+                    quantity: quantity,
+                    price: parseInt(checkbox.getAttribute('data-price'))
+                });
+            });
+            
+            // Create WhatsApp message
+            let message = "Hello! I would like to place an order:%0A%0A";
+            message += "*Name:* " + formData.get('name') + "%0A";
+            message += "*Phone:* " + formData.get('phone') + "%0A";
+            message += "*Address:* " + formData.get('address') + "%0A";
+            message += "*City:* " + formData.get('city') + "%0A";
+            message += "*Pincode:* " + formData.get('pincode') + "%0A%0A";
+            
+            message += "*Order Details:*%0A";
+            products.forEach(product => {
+                message += "• " + product.name + " (Qty: " + product.quantity + ") - ₹" + (product.quantity * product.price) + "%0A";
+            });
+            
+            message += "%0A*Total: ₹" + document.getElementById('orderTotal').textContent + "*%0A%0A";
+            
+            if (formData.get('message')) {
+                message += "*Special Instructions:* " + formData.get('message') + "%0A%0A";
+            }
+            
+            message += "Please confirm my order. Thank you!";
+            
+            // Open WhatsApp
+            window.open('https://wa.me/919999999999?text=' + message, '_blank');
+        }
+
+        // Order via WhatsApp from product cards
+        function orderViaWhatsApp(button) {
+            const card = button.closest('.product-card');
+            const product = card.getAttribute('data-product');
+            const price = card.getAttribute('data-price');
+            const weight = card.getAttribute('data-weight');
+            const quantity = parseInt(card.querySelector('.quantity-display').textContent);
+            
+            const message = "Hello! I would like to order:%0A%0A" +
+                           "*Product:* " + product + "%0A" +
+                           "*Weight:* " + weight + "%0A" +
+                           "*Quantity:* " + quantity + "%0A" +
+                           "*Total: ₹" + (quantity * price) + "*%0A%0A" +
+                           "Please contact me to complete the order. Thank you!";
+            
+            window.open('https://wa.me/919999999999?text=' + message, '_blank');
+        }
+
+        // Scroll to products
+        function scrollToProducts() {
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Scroll to info
+        function scrollToInfo() {
+            document.getElementById('makhana-info').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
-    </div>
 </body>
 </html>
