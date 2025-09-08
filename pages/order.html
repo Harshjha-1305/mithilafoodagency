@@ -1,0 +1,144 @@
+<section class="section">
+    <div class="container">
+        <div class="order-form fade-in">
+            <div class="section-header">
+                <span class="section-badge">Place Your Order</span>
+                <h2 class="section-title">Order Ugna Makhana</h2>
+                <p class="section-subtitle">Fill out the form below and we'll contact you to confirm your order</p>
+            </div>
+            
+            <div class="success-message" id="successMessage">
+                <h3>Thank You for Your Order!</h3>
+                <p>Dear Customer, Thank you for placing an order with Mithila Food Agency! We appreciate your trust in our products. Your order will be delivered as per our schedule. If you have any questions or need assistance, feel free to reach out. Best regards, Mithila Food Agency</p>
+            </div>
+            
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your WhatsApp number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address" rows="3" required placeholder="Enter your complete delivery address"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required placeholder="Enter your city">
+                </div>
+                
+                <div class="form-group">
+                    <label for="pincode">Pincode</label>
+                    <input type="text" id="pincode" name="pincode" required placeholder="Enter your area pincode">
+                </div>
+                
+                <div class="order-products-section">
+                    <h3>Select Products</h3>
+                    <div class="product-selection">
+                        <div class="product-item">
+                            <input type="checkbox" class="product-checkbox" id="product1" name="products" value="Premium Quality Plain" data-price="350">
+                            <div class="product-info">
+                                <div class="product-name">Premium Quality Plain (100g)</div>
+                                <div class="product-price-text">₹350</div>
+                            </div>
+                            <div class="mobile-quantity">
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <input type="checkbox" class="product-checkbox" id="product2" name="products" value="Chat Masala" data-price="280">
+                            <div class="product-info">
+                                <div class="product-name">Chat Masala (45g)</div>
+                                <div class="product-price-text">₹280</div>
+                            </div>
+                            <div class="mobile-quantity">
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <input type="checkbox" class="product-checkbox" id="product3" name="products" value="Pudina Lemon" data-price="280">
+                            <div class="product-info">
+                                <div class="product-name">Pudina Lemon (45g)</div>
+                                <div class="product-price-text">₹280</div>
+                            </div>
+                            <div class="mobile-quantity">
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <input type="checkbox" class="product-checkbox" id="product4" name="products" value="Salt and Pepper" data-price="270">
+                            <div class="product-info">
+                                <div class="product-name">Salt and Pepper (45g)</div>
+                                <div class="product-price-text">₹270</div>
+                            </div>
+                            <div class="mobile-quantity">
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <input type="checkbox" class="product-checkbox" id="product5" name="products" value="Cocktail Chakna" data-price="300">
+                            <div class="product-info">
+                                <div class="product-name">Cocktail Chakna (45g)</div>
+                                <div class="product-price-text">₹300</div>
+                            </div>
+                            <div class="mobile-quantity">
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-item">
+                            <input type="checkbox" class="product-checkbox" id="product6" name="products" value="Peri Peri" data-price="290">
+                            <div class="product-info">
+                                <div class="product-name">Peri Peri (45g)</div>
+                                <div class="product-price-text">₹290</div>
+                            </div>
+                            <div class="mobile-quantity">
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Special Instructions (Optional)</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Any special delivery instructions or requests"></textarea>
+                </div>
+                
+                <div class="total-section" style="text-align: center; margin: 2rem 0;">
+                    <h3>Total: ₹<span id="orderTotal">0</span></h3>
+                </div>
+                
+                <button type="submit" class="whatsapp-order-btn" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    <i class="fab fa-whatsapp"></i> Place Order via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

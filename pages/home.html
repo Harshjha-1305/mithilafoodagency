@@ -1,0 +1,522 @@
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content fade-in">
+        <h1>Welcome to the Essence of Mithila</h1>
+        <p class="hero-subtitle">From the pristine lotus ponds of Mithila to your table - every kernel tells a story of purity, nutrition, and tradition. Experience the authentic taste of this ancient superfood that has nourished generations for over 3,000 years.</p>
+        <div class="cta-buttons">
+            <a href="#products" class="btn btn-primary" onclick="scrollToProducts()">
+                <i class="fas fa-shopping-cart"></i> Shop Now
+            </a>
+            <a href="#makhana-info" class="btn btn-secondary" onclick="scrollToInfo()">
+                <i class="fas fa-book-open"></i> Know More
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Enhanced What is Makhana Section -->
+<section class="makhana-info-section" id="makhana-info">
+    <div class="container">
+        <div class="info-card fade-in">
+            <h2 class="info-title">What is <span class="info-highlight">Makhana</span>?</h2>
+            <p class="info-text">
+                Makhana, also known as <strong>Fox Nuts</strong> or <strong>Lotus Seeds</strong>, is an ancient superfood that has been cherished in Indian culture for over 3,000 years. These white, crunchy seeds are harvested from the sacred lotus flowers that bloom in the pristine wetlands of Bihar's Mithila region.
+            </p>
+            
+            <div class="info-features">
+                <div class="info-feature">
+                    <div class="info-feature-icon">🌱</div>
+                    <h3 class="info-feature-title">100% Natural</h3>
+                    <p class="info-feature-text">Hand-harvested from lotus ponds, completely organic and free from chemicals or preservatives.</p>
+                </div>
+                
+                <div class="info-feature">
+                    <div class="info-feature-icon">💪</div>
+                    <h3 class="info-feature-title">High Protein</h3>
+                    <p class="info-feature-text">9.7g protein per 100g with complete amino acid profile for muscle development.</p>
+                </div>
+                
+                <div class="info-feature">
+                    <div class="info-feature-icon">🚫</div>
+                    <h3 class="info-feature-title">Gluten-Free</h3>
+                    <p class="info-feature-text">Perfect for gluten-sensitive individuals and those following special diets.</p>
+                </div>
+                
+                <div class="info-feature">
+                    <div class="info-feature-icon">⚡</div>
+                    <h3 class="info-feature-title">Low Glycemic</h3>
+                    <p class="info-feature-text">Helps maintain stable blood sugar levels, ideal for diabetics.</p>
+                </div>
+            </div>
+            
+            <p class="info-text">
+                In Ayurveda, makhana is considered a <span class="info-highlight">"Sattvic" food</span> - pure, light, and nourishing to both body and mind. From traditional Indian sweets like <em>Makhana Kheer</em> to modern healthy snacking, this versatile superfood connects you to centuries of wellness wisdom.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Enhanced Product Section -->
+<section class="products-section" id="products">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Premium Collection</span>
+            <h2 class="section-title">Our Makhana Flavors</h2>
+            <p class="section-subtitle">Handcrafted with love by traditional farmers of Mithila, each pack tells a story of generations of expertise and dedication to quality.</p>
+        </div>
+        <div class="products-grid">
+            <!-- Premium Quality Plain Makhana -->
+            <div class="product-card fade-in" data-product="Premium Quality Plain" data-price="350" data-weight="100">
+                <div class="product-image">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="product-title">Premium Quality Plain</h3>
+                <p class="product-description">Pure, unflavored makhana with its natural nutty taste. Perfect for cooking, making kheer, or enjoying as a light snack. Hand-harvested from pristine Bihar ponds.</p>
+                <div class="product-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Weight:</span>
+                        <span class="detail-value">100g</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Processor:</span>
+                        <span class="detail-value">Sourav Makhana & Co</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Type:</span>
+                        <span class="detail-value">100% Organic</span>
+                    </div>
+                </div>
+                <p class="product-price">₹350</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </button>
+            </div>
+
+            <!-- Chat Masala -->
+            <div class="product-card fade-in" data-product="Chat Masala" data-price="280" data-weight="45">
+                <div class="product-image">
+                    <i class="fas fa-pepper-hot"></i>
+                </div>
+                <h3 class="product-title">Chat Masala</h3>
+                <p class="product-description">A tangy and spicy blend of traditional chat masala to give you an authentic street food experience. Perfect for a savory treat that awakens your taste buds.</p>
+                <div class="product-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Weight:</span>
+                        <span class="detail-value">45g</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Processor:</span>
+                        <span class="detail-value">Taruwar Agro Industries</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Flavor:</span>
+                        <span class="detail-value">Tangy & Spicy</span>
+                    </div>
+                </div>
+                <p class="product-price">₹280</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </button>
+            </div>
+
+            <!-- Pudina Lemon -->
+            <div class="product-card fade-in" data-product="Pudina Lemon" data-price="280" data-weight="45">
+                <div class="product-image">
+                    <i class="fas fa-lemon"></i>
+                </div>
+                <h3 class="product-title">Pudina Lemon</h3>
+                <p class="product-description">A refreshing combination of mint and lemon that awakens your taste buds. Perfect for a light and zesty snack that provides natural freshness.</p>
+                <div class="product-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Weight:</span>
+                        <span class="detail-value">45g</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Processor:</span>
+                        <span class="detail-value">Taruwar Agro Industries</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Flavor:</span>
+                        <span class="detail-value">Mint & Lemon</span>
+                    </div>
+                </div>
+                <p class="product-price">₹280</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </button>
+            </div>
+
+            <!-- Salt and Pepper -->
+            <div class="product-card fade-in" data-product="Salt and Pepper" data-price="270" data-weight="45">
+                <div class="product-image">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="product-title">Salt and Pepper</h3>
+                <p class="product-description">Classic seasoning with the perfect balance of salt and pepper. A timeless flavor that enhances the natural taste of makhana without overpowering it.</p>
+                <div class="product-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Weight:</span>
+                        <span class="detail-value">45g</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Processor:</span>
+                        <span class="detail-value">Taruwar Agro Industries</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Flavor:</span>
+                        <span class="detail-value">Classic</span>
+                    </div>
+                </div>
+                <p class="product-price">₹270</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </button>
+            </div>
+
+            <!-- Cocktail Chakna -->
+            <div class="product-card fade-in" data-product="Cocktail Chakna" data-price="300" data-weight="45">
+                <div class="product-image">
+                    <i class="fas fa-cocktail"></i>
+                </div>
+                <h3 class="product-title">Cocktail Chakna</h3>
+                <p class="product-description">Perfect party mix flavor that combines multiple spices for an exciting taste experience. Ideal as an accompaniment for evening gatherings and celebrations.</p>
+                <div class="product-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Weight:</span>
+                        <span class="detail-value">45g</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Processor:</span>
+                        <span class="detail-value">Taruwar Agro Industries</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Flavor:</span>
+                        <span class="detail-value">Party Mix</span>
+                    </div>
+                </div>
+                <p class="product-price">₹300</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </button>
+            </div>
+
+            <!-- Peri Peri -->
+            <div class="product-card fade-in" data-product="Peri Peri" data-price="290" data-weight="45">
+                <div class="product-image">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3 class="product-title">Peri Peri</h3>
+                <p class="product-description">Fiery and flavorful peri peri seasoning for those who love a spicy kick. Made with authentic peri peri spice blend that delivers heat with flavor.</p>
+                <div class="product-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Weight:</span>
+                        <span class="detail-value">45g</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Processor:</span>
+                        <span class="detail-value">Taruwar Agro Industries</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Flavor:</span>
+                        <span class="detail-value">Spicy Hot</span>
+                    </div>
+                </div>
+                <p class="product-price">₹290</p>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="whatsapp-order-btn" onclick="orderViaWhatsApp(this)">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Nutritionist Recommendation Section -->
+<section class="section">
+    <div class="container">
+        <div class="nutritionist-section fade-in">
+            <div class="section-header">
+                <span class="nutritionist-badge">Nutritionist Approved</span>
+                <h2 class="section-title">Why Nutritionists Recommend Makhana</h2>
+                <p class="section-subtitle">Backed by science and trusted by health professionals worldwide</p>
+            </div>
+            
+            <div class="nutritionist-grid">
+                <div class="nutritionist-card fade-in">
+                    <div class="nutritionist-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="nutritionist-title">Low Glycemic Index</h3>
+                    <p class="nutritionist-text">Stable blood sugar, sustained energy for 3-4 hours. Perfect for diabetics and weight management programs.</p>
+                </div>
+                
+                <div class="nutritionist-card fade-in">
+                    <div class="nutritionist-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="nutritionist-title">Plant-Based Protein</h3>
+                    <p class="nutritionist-text">9.7g per 100g - Complete amino acid profile that supports muscle development and tissue repair.</p>
+                </div>
+                
+                <div class="nutritionist-card fade-in">
+                    <div class="nutritionist-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="nutritionist-title">Heart Health</h3>
+                    <p class="nutritionist-text">Zero cholesterol, rich in magnesium & potassium. Supports cardiovascular health naturally.</p>
+                </div>
+                
+                <div class="nutritionist-card fade-in">
+                    <div class="nutritionist-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="nutritionist-title">Rich in Antioxidants</h3>
+                    <p class="nutritionist-text">Flavonoids & polyphenols for immune support and cellular protection against oxidative stress.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Nutrition Comparison Section -->
+<section class="section" style="background: var(--warm-white); padding: 4rem 2rem;">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <span style="display: inline-block; background: var(--accent-green); color: white; padding: 0.8rem 2rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2rem;">Nutrition Facts</span>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.5rem); color: var(--text-dark); margin-bottom: 2rem; font-weight: 600; line-height: 1.3;">How Mithila Fox Nuts Compare</h2>
+            <p style="font-size: 1.2rem; color: var(--text-light); max-width: 700px; margin: 0 auto; line-height: 1.6;">See why makhana is the smarter choice for your health</p>
+        </div>
+        
+        <div style="background: white; border-radius: 25px; padding: 2rem; box-shadow: var(--shadow); overflow-x: auto; max-width: 1000px; margin: 0 auto;">
+            <table style="width: 100%; border-collapse: collapse; font-family: 'Inter', sans-serif;">
+                <thead>
+                    <tr>
+                        <th style="text-align: left; padding: 1.5rem 1rem; font-weight: 600; color: var(--deep-brown); font-size: 1rem; border-bottom: 3px solid var(--primary-yellow); background: var(--cream);">Nutrient (per 100g)</th>
+                        <th style="text-align: center; padding: 1.5rem 1rem; font-weight: 700; color: var(--accent-green); font-size: 1.1rem; border-bottom: 3px solid var(--primary-yellow); background: linear-gradient(135deg, #E8F5E8, #F1F8E9);">Fox Nuts (Makhana)</th>
+                        <th style="text-align: center; padding: 1.5rem 1rem; font-weight: 600; color: var(--text-dark); font-size: 1rem; border-bottom: 3px solid var(--primary-yellow); background: var(--cream);">Potato Chips</th>
+                        <th style="text-align: center; padding: 1.5rem 1rem; font-weight: 600; color: var(--text-dark); font-size: 1rem; border-bottom: 3px solid var(--primary-yellow); background: var(--cream);">Almonds</th>
+                        <th style="text-align: center; padding: 1.5rem 1rem; font-weight: 600; color: var(--text-dark); font-size: 1rem; border-bottom: 3px solid var(--primary-yellow); background: var(--cream);">Popcorn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #E0E0E0;">
+                        <td style="padding: 1.2rem 1rem; font-weight: 600; color: var(--text-dark);">Calories</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; font-weight: 700; color: var(--accent-green); background: linear-gradient(135deg, #E8F5E8, #F1F8E9);">347 kcal</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">536 kcal</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">579 kcal</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">387 kcal</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #E0E0E0;">
+                        <td style="padding: 1.2rem 1rem; font-weight: 600; color: var(--text-dark);">Protein</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; font-weight: 700; color: var(--accent-green); background: linear-gradient(135deg, #E8F5E8, #F1F8E9);">9.7g</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">7g</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">21g</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">12g</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #E0E0E0;">
+                        <td style="padding: 1.2rem 1rem; font-weight: 600; color: var(--text-dark);">Fat</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; font-weight: 700; color: var(--accent-green); background: linear-gradient(135deg, #E8F5E8, #F1F8E9);">0.1g</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">37g</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">50g</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">4.5g</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #E0E0E0;">
+                        <td style="padding: 1.2rem 1rem; font-weight: 600; color: var(--text-dark);">Cholesterol</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; font-weight: 700; color: var(--accent-green); background: linear-gradient(135deg, #E8F5E8, #F1F8E9);">0mg</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">11mg</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">0mg</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">0mg</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #E0E0E0;">
+                        <td style="padding: 1.2rem 1rem; font-weight: 600; color: var(--text-dark);">Fiber</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; font-weight: 700; color: var(--accent-green); background: linear-gradient(135deg, #E8F5E8, #F1F8E9);">14.5g</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">3.1g</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">12.5g</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">15g</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1.2rem 1rem; font-weight: 600; color: var(--text-dark);">Sodium</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; font-weight: 700; color: var(--accent-green); background: linear-gradient(135deg, #E8F5E8, #F1F8E9);">1mg</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">525mg</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">1mg</td>
+                        <td style="padding: 1.2rem 1rem; text-align: center; color: var(--text-dark);">7mg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 800px; margin: 0 auto;">
+                <div style="background: linear-gradient(135deg, var(--accent-green), #4CAF50); color: white; padding: 1.5rem; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏆</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">Winner</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">Lowest Fat Content</div>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--primary-red), var(--primary-orange)); color: white; padding: 1.5rem; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">❤️</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">Heart Healthy</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">Zero Cholesterol</div>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--primary-yellow), var(--primary-orange)); color: var(--deep-brown); padding: 1.5rem; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧂</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">Low Sodium</div>
+                    <div style="font-size: 0.9rem;">Perfect for BP</div>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--mithila-blue), #1565C0); color: white; padding: 1.5rem; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">💪</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">High Fiber</div>
+                    <div style="font-size: 0.9rem; opacity: 0.9;">Digestive Health</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+@media (max-width: 768px) {
+    .container table {
+        font-size: 0.8rem;
+    }
+    .container th, .container td {
+        padding: 0.8rem 0.5rem !important;
+    }
+    .container th {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container table {
+        font-size: 0.7rem;
+    }
+    .container th, .container td {
+        padding: 0.6rem 0.3rem !important;
+    }
+    .container th {
+        font-size: 0.8rem !important;
+    }
+}
+</style>
+
+<!-- Health Benefits Section -->
+<section class="health-benefits-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Health Benefits</span>
+            <h2 class="section-title">The Miracle of Makhana</h2>
+            <p class="section-subtitle">Discover why this ancient superfood is perfect for modern wellness</p>
+        </div>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">
+                    <i class="fas fa-weight"></i>
+                </div>
+                <h3 class="benefit-title">Weight Management</h3>
+                <p class="benefit-text">Low in calories and high in fiber, makhana helps you feel full longer, reducing overall calorie intake and supporting healthy weight management.</p>
+            </div>
+            
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="benefit-title">Heart Health</h3>
+                <p class="benefit-text">Rich in magnesium and potassium, makhana helps regulate blood pressure and supports cardiovascular health without adding cholesterol.</p>
+            </div>
+            
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="benefit-title">Brain Function</h3>
+                <p class="benefit-text">The antioxidants in makhana help protect brain cells from oxidative stress, supporting cognitive function and memory retention.</p>
+            </div>
+            
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <h3 class="benefit-title">Bone Strength</h3>
+                <p class="benefit-text">Packed with calcium and other minerals, makhana contributes to maintaining strong bones and preventing osteoporosis.</p>
+            </div>
+
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="benefit-title">Anti-Aging Properties</h3>
+                <p class="benefit-text">Rich in antioxidants that fight free radicals, helping maintain youthful skin and slowing down the aging process naturally.</p>
+            </div>
+
+            <div class="benefit-card fade-in">
+                <div class="benefit-icon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <h3 class="benefit-title">Better Sleep</h3>
+                <p class="benefit-text">Contains natural compounds that promote relaxation and better sleep quality, making it an ideal evening snack.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Heritage Section -->
+<section class="section">
+    <div class="container">
+        <div class="heritage-section fade-in">
+            <div class="heritage-content">
+                <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">Ancient Wisdom</span>
+                <h2 class="section-title" style="color: white;">The Mithila Difference</h2>
+                <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 3rem;">
+                    In the fertile wetlands of Bihar's Mithila region, this "white gold" grows naturally in the sacred lotus ponds, where generations of skilled farmers have perfected the art of harvesting these precious seeds.
+                </p>
+                <div class="heritage-stats">
+                    <div class="heritage-stat">
+                        <div class="heritage-number">3000+</div>
+                        <div class="heritage-label">Years of Ayurvedic Tradition</div>
+                    </div>
+                    <div class="heritage-stat">
+                        <div class="heritage-number">15+</div>
+                        <div class="heritage-label">Generations of Farmers</div>
+                    </div>
+                    <div class="heritage-stat">
+                        <div class="heritage-number">100%</div>
+                        <div class="heritage-label">Organic & Natural</div>
+                    </div>
+                    <div class="heritage-stat">
+                        <div class="heritage-number">0</div>
+                        <div class="heritage-label">Artificial Preservatives</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
