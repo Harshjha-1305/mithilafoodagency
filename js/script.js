@@ -205,7 +205,7 @@ function submitOrderForm() {
     
     // Open WhatsApp after a delay
     setTimeout(() => {
-        window.open('https://wa.me/919930315235?text=' + message, '_blank');
+        window.open('https://wa.me/919768661589?text=' + message, '_blank');
     }, 2000);
     
     // Reset form
@@ -235,7 +235,7 @@ function submitContactForm() {
     
     // Open WhatsApp after a delay
     setTimeout(() => {
-        window.open('https://wa.me/919930315235?text=' + message, '_blank');
+        window.open('https://wa.me/919768661589?text=' + message, '_blank');
     }, 2000);
     
     // Reset form
@@ -260,7 +260,7 @@ function orderViaWhatsApp(button) {
                    "*Total: ₹" + (quantity * price) + "*%0A%0A" +
                    "Please contact me to complete the order. Thank you!";
     
-    window.open('https://wa.me/919930315235?text=' + message, '_blank');
+    window.open('https://wa.me/919768661589?text=' + message, '_blank');
 }
 
 // Scroll to products
