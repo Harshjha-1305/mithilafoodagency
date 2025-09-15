@@ -1322,3 +1322,202 @@ body {
         font-size: 1.4rem !important;
     }
 }
+
+/* Product image styling */
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Product price subtext */
+.product-price sub {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    margin-left: 0.3rem;
+}
+
+/* Featured Makhana Section */
+.featured-makhana {
+    background: linear-gradient(135deg, var(--cream) 0%, #FFF3E0 100%);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-yellow);
+}
+
+.featured-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.featured-text {
+    text-align: center;
+}
+
+.featured-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--primary-red);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.featured-text p {
+    color: var(--text-light);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 500;
+}
+
+.featured-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.featured-image img {
+    width: clamp(120px, 15vw, 200px);
+    height: clamp(120px, 15vw, 200px);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-orange);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.featured-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.featured-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: linear-gradient(45deg, var(--primary-red), var(--primary-orange));
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Founder Story Section */
+.founder-story-section {
+    background: var(--warm-white);
+    padding: 4rem 1rem;
+}
+
+.founder-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.founder-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.founder-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid var(--primary-orange);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.founder-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.founder-badge {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, var(--primary-red), var(--primary-orange));
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.founder-text {
+    padding: 1rem 0;
+}
+
+.founder-story {
+    margin-top: 1.5rem;
+}
+
+.story-paragraph {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.story-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--primary-red);
+    margin: 2rem 0 1rem 0;
+    font-weight: 600;
+}
+
+.story-cta {
+    background: linear-gradient(135deg, var(--cream), #FFF3E0);
+    padding: 2rem;
+    border-radius: 18px;
+    margin-top: 2rem;
+    text-align: center;
+    border-left: 4px solid var(--primary-orange);
+}
+
+.cta-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.founder-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-orange);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.founder-btn:hover {
+    background: var(--primary-red);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
