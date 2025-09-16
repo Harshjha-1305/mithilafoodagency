@@ -63,8 +63,7 @@ function initNavigation() {
             window.scrollTo(0, 0);
             
             // Close mobile menu if open
-            document.getElementById('navMenu').classList.remove('active');
-            document.getElementById('mobileMenuBtn').innerHTML = '<i class="fas fa-bars"></i>';
+            closeMobileMenu();
         });
     });
 }
@@ -73,13 +72,97 @@ function initNavigation() {
 function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
     
     if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            this.innerHTML = navMenu.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        // Mobile menu button click
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
         });
+        
+        // Overlay click - close menu
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', function() {
+                closeMobileMenu();
+            });
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
+        });
+    }
+}
+
+// Toggle mobile menu
+function toggleMobileMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    
+    if (navMenu && mobileMenuBtn) {
+        const isActive = navMenu.classList.contains('active');
+        
+        if (isActive) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+}
+
+// Open mobile menu
+function openMobileMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    
+    navMenu.classList.add('active');
+    mobileMenuBtn.classList.add('active');
+    mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+    
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.add('active');
+    }
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+}
+
+// Close mobile menu
+function closeMobileMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    
+    if (navMenu && mobileMenuBtn) {
+        navMenu.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.classList.remove('active');
+        }
+        
+        // Restore body scroll
+        document.body.style.overflow = '';
     }
 }
 
@@ -216,7 +299,7 @@ function submitOrderForm() {
     }, 5000);
 }
 
-// Submit contact form with direct email functionality
+// Submit contact form
 function submitContactForm() {
     const form = document.getElementById('contactForm');
     const formData = new FormData(form);
@@ -235,45 +318,30 @@ function submitContactForm() {
     }
     
     // Create email content
-    const emailSubject = `Contact Form Submission: ${subject} - ${name}`;
-    const emailBody = `Dear Mithila Food Agency Team,%0A%0A` +
-                     `I would like to get in touch with you regarding: ${subject}%0A%0A` +
-                     `Contact Details:%0A` +
-                     `Name: ${name}%0A` +
+    const emailSubject = `Contact Form: ${subject} - ${name}`;
+    const emailBody = `Name: ${name}%0A` +
                      `Phone: ${phone}%0A` +
-                     `Email: ${email}%0A%0A` +
-                     `Message:%0A${message}%0A%0A` +
-                     `Please get back to me at your earliest convenience.%0A%0A` +
-                     `Best regards,%0A${name}`;
+                     `Email: ${email}%0A` +
+                     `Subject: ${subject}%0A%0A` +
+                     `Message: ${message}%0A%0A` +
+                     `Please get back to me. Thank you!`;
     
-    // Create WhatsApp message for backup
-    const whatsappMessage = "Hello! I have a query:%0A%0A" +
-                           "*Name:* " + name + "%0A" +
-                           "*Phone:* " + phone + "%0A" +
-                           "*Email:* " + email + "%0A" +
-                           "*Subject:* " + subject + "%0A%0A" +
-                           "*Message:* " + message + "%0A%0A" +
-                           "Please get back to me. Thank you!";
-    
-    // Open email client with pre-filled information
+    // Create mailto link
     const mailtoLink = `mailto:care@mithilafoodagency.com?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
     
-    // Try to open email client, fallback to WhatsApp
+    // Try to open email client after 1 second
     setTimeout(() => {
         try {
             window.open(mailtoLink, '_self');
-            
-            // Also provide WhatsApp option as backup after 3 seconds
-            setTimeout(() => {
-                if (confirm('Email client not available? Would you like to send via WhatsApp instead?')) {
-                    window.open('https://wa.me/919798661589?text=' + whatsappMessage, '_blank');
-                }
-            }, 3000);
-            
         } catch (error) {
-            // If email fails, use WhatsApp
-            window.open('https://wa.me/919798661589?text=' + whatsappMessage, '_blank');
+            // If email fails, fallback to WhatsApp
+            sendContactViaWhatsApp(name, phone, email, subject, message);
         }
+        
+        // Also provide WhatsApp fallback after 3 seconds if email client doesn't respond
+        setTimeout(() => {
+            sendContactViaWhatsApp(name, phone, email, subject, message);
+        }, 3000);
     }, 1000);
     
     // Reset form after delay
@@ -283,6 +351,19 @@ function submitContactForm() {
             successMessage.classList.remove('show');
         }
     }, 5000);
+}
+
+// Send contact via WhatsApp
+function sendContactViaWhatsApp(name, phone, email, subject, message) {
+    const whatsappMessage = "Hello! I have a query:%0A%0A" +
+                           "*Name:* " + name + "%0A" +
+                           "*Phone:* " + phone + "%0A" +
+                           "*Email:* " + email + "%0A" +
+                           "*Subject:* " + subject + "%0A%0A" +
+                           "*Message:* " + message + "%0A%0A" +
+                           "Please get back to me. Thank you!";
+    
+    window.open('https://wa.me/919798661589?text=' + whatsappMessage, '_blank');
 }
 
 // Order via WhatsApp from product cards
