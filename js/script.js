@@ -216,32 +216,72 @@ function submitOrderForm() {
     }, 5000);
 }
 
-// Submit contact form
+// Submit contact form with direct email functionality
 function submitContactForm() {
     const form = document.getElementById('contactForm');
     const formData = new FormData(form);
     
+    // Get form values
+    const name = formData.get('name');
+    const phone = formData.get('phone');
+    const email = formData.get('email');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+    
     // Show success message
-    document.getElementById('contactSuccessMessage').classList.add('show');
+    const successMessage = document.getElementById('contactSuccessMessage');
+    if (successMessage) {
+        successMessage.classList.add('show');
+    }
     
-    // Create WhatsApp message
-    let message = "Hello! I have a query:%0A%0A";
-    message += "*Name:* " + formData.get('name') + "%0A";
-    message += "*Phone:* " + formData.get('phone') + "%0A";
-    message += "*Email:* " + (formData.get('email') || 'Not provided') + "%0A";
-    message += "*Subject:* " + formData.get('subject') + "%0A%0A";
-    message += "*Message:* " + formData.get('message') + "%0A%0A";
-    message += "Please get back to me. Thank you!";
+    // Create email content
+    const emailSubject = `Contact Form Submission: ${subject} - ${name}`;
+    const emailBody = `Dear Mithila Food Agency Team,%0A%0A` +
+                     `I would like to get in touch with you regarding: ${subject}%0A%0A` +
+                     `Contact Details:%0A` +
+                     `Name: ${name}%0A` +
+                     `Phone: ${phone}%0A` +
+                     `Email: ${email}%0A%0A` +
+                     `Message:%0A${message}%0A%0A` +
+                     `Please get back to me at your earliest convenience.%0A%0A` +
+                     `Best regards,%0A${name}`;
     
-    // Open WhatsApp after a delay
+    // Create WhatsApp message for backup
+    const whatsappMessage = "Hello! I have a query:%0A%0A" +
+                           "*Name:* " + name + "%0A" +
+                           "*Phone:* " + phone + "%0A" +
+                           "*Email:* " + email + "%0A" +
+                           "*Subject:* " + subject + "%0A%0A" +
+                           "*Message:* " + message + "%0A%0A" +
+                           "Please get back to me. Thank you!";
+    
+    // Open email client with pre-filled information
+    const mailtoLink = `mailto:care@mithilafoodagency.com?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
+    
+    // Try to open email client, fallback to WhatsApp
     setTimeout(() => {
-        window.open('https://wa.me/919798661589?text=' + message, '_blank');
-    }, 2000);
+        try {
+            window.open(mailtoLink, '_self');
+            
+            // Also provide WhatsApp option as backup after 3 seconds
+            setTimeout(() => {
+                if (confirm('Email client not available? Would you like to send via WhatsApp instead?')) {
+                    window.open('https://wa.me/919798661589?text=' + whatsappMessage, '_blank');
+                }
+            }, 3000);
+            
+        } catch (error) {
+            // If email fails, use WhatsApp
+            window.open('https://wa.me/919798661589?text=' + whatsappMessage, '_blank');
+        }
+    }, 1000);
     
-    // Reset form
+    // Reset form after delay
     setTimeout(() => {
         form.reset();
-        document.getElementById('contactSuccessMessage').classList.remove('show');
+        if (successMessage) {
+            successMessage.classList.remove('show');
+        }
     }, 5000);
 }
 
