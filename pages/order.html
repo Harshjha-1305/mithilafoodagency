@@ -2,9 +2,14 @@
     <div class="container">
         <div class="order-form fade-in">
             <div class="section-header">
-                <span class="section-badge">Place Your Order</span>
+                <span class="section-badge">Wholesale Orders Only</span>
                 <h2 class="section-title">Order Ugna Makhana</h2>
                 <p class="section-subtitle">Fill out the form below and we'll contact you to confirm your order</p>
+                <div style="background: linear-gradient(135deg, #fff3cd 0%, #fff9e6 100%); border-left: 4px solid #ffc107; padding: 1rem 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                    <p style="margin: 0; font-weight: 600; color: #856404;">
+                        <i class="fas fa-info-circle"></i> <strong>Wholesale Orders Only:</strong> This page is for bulk/wholesale purchases only.
+                    </p>
+                </div>
             </div>
             
             <div class="success-message" id="successMessage">
@@ -47,10 +52,10 @@
                     <h3>Select Products</h3>
                     <div class="product-selection">
                         <div class="product-item">
-                            <input type="checkbox" class="product-checkbox" id="product1" name="products" value="Premium Quality Plain" data-price="350">
+                            <input type="checkbox" class="product-checkbox" id="product1" name="products" value="Premium Quality Plain (150g)" data-price="299">
                             <div class="product-info">
-                                <div class="product-name">Premium Quality Plain (100g)</div>
-                                <div class="product-price-text">₹199</div>
+                                <div class="product-name">Premium Quality Plain (150g)</div>
+                                <div class="product-price-text">₹299 <span style="font-size: 0.85em; color: #999; text-decoration: line-through;">MRP: ₹429</span></div>
                             </div>
                             <div class="mobile-quantity">
                                 <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
@@ -60,10 +65,10 @@
                         </div>
                         
                         <div class="product-item">
-                            <input type="checkbox" class="product-checkbox" id="product2" name="products" value="Chat Masala" data-price="280">
+                            <input type="checkbox" class="product-checkbox" id="product2" name="products" value="Tomato Chilly (40g)" data-price="99">
                             <div class="product-info">
-                                <div class="product-name">Chat Masala (45g)</div>
-                                <div class="product-price-text">₹110</div>
+                                <div class="product-name">Tomato Chilly (40g)</div>
+                                <div class="product-price-text">₹99 <span style="font-size: 0.85em; color: #999; text-decoration: line-through;">MRP: ₹139</span></div>
                             </div>
                             <div class="mobile-quantity">
                                 <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
@@ -73,10 +78,10 @@
                         </div>
                         
                         <div class="product-item">
-                            <input type="checkbox" class="product-checkbox" id="product3" name="products" value="Pudina Lemon" data-price="280">
+                            <input type="checkbox" class="product-checkbox" id="product3" name="products" value="Pudina Lemon (40g)" data-price="99">
                             <div class="product-info">
-                                <div class="product-name">Pudina Lemon (45g)</div>
-                                <div class="product-price-text">₹110</div>
+                                <div class="product-name">Pudina Lemon (40g)</div>
+                                <div class="product-price-text">₹99 <span style="font-size: 0.85em; color: #999; text-decoration: line-through;">MRP: ₹139</span></div>
                             </div>
                             <div class="mobile-quantity">
                                 <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
@@ -86,10 +91,10 @@
                         </div>
                         
                         <div class="product-item">
-                            <input type="checkbox" class="product-checkbox" id="product4" name="products" value="Salt and Pepper" data-price="270">
+                            <input type="checkbox" class="product-checkbox" id="product4" name="products" value="Salt and Pepper (40g)" data-price="99">
                             <div class="product-info">
-                                <div class="product-name">Salt and Pepper (45g)</div>
-                                <div class="product-price-text">₹110</div>
+                                <div class="product-name">Salt and Pepper (40g)</div>
+                                <div class="product-price-text">₹99 <span style="font-size: 0.85em; color: #999; text-decoration: line-through;">MRP: ₹139</span></div>
                             </div>
                             <div class="mobile-quantity">
                                 <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
@@ -99,10 +104,10 @@
                         </div>
                         
                         <div class="product-item">
-                            <input type="checkbox" class="product-checkbox" id="product5" name="products" value="Cocktail Chakna" data-price="300">
+                            <input type="checkbox" class="product-checkbox" id="product5" name="products" value="Cocktail Chakna (40g)" data-price="99">
                             <div class="product-info">
-                                <div class="product-name">Cocktail Chakna (45g)</div>
-                                <div class="product-price-text">₹110</div>
+                                <div class="product-name">Cocktail Chakna (40g)</div>
+                                <div class="product-price-text">₹99 <span style="font-size: 0.85em; color: #999; text-decoration: line-through;">MRP: ₹139</span></div>
                             </div>
                             <div class="mobile-quantity">
                                 <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
@@ -112,10 +117,27 @@
                         </div>
                         
                         <div class="product-item">
-                            <input type="checkbox" class="product-checkbox" id="product6" name="products" value="Peri Peri" data-price="290">
+                            <input type="checkbox" class="product-checkbox" id="product6" name="products" value="Peri Peri (40g)" data-price="99">
                             <div class="product-info">
-                                <div class="product-name">Peri Peri (45g)</div>
-                                <div class="product-price-text">₹110</div>
+                                <div class="product-name">Peri Peri (40g)</div>
+                                <div class="product-price-text">₹99 <span style="font-size: 0.85em; color: #999; text-decoration: line-through;">MRP: ₹139</span></div>
+                            </div>
+                            <div class="mobile-quantity">
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
+                                <span class="quantity-display">1</span>
+                                <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, 1)">+</button>
+                            </div>
+                        </div>
+
+                        <!-- 1 kg Bulk Offer -->
+                        <div class="product-item" style="border: 2px solid #28a745; background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);">
+                            <input type="checkbox" class="product-checkbox" id="product7" name="products" value="1 kg Raw Makhana (Bulk)" data-price="1699">
+                            <div class="product-info">
+                                <div class="product-name" style="font-weight: bold;">
+                                    1 kg Raw Makhana (Bulk Buy Special!) 
+                                    <span style="background: #28a745; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; margin-left: 5px;">OFFER</span>
+                                </div>
+                                <div class="product-price-text" style="color: #28a745; font-weight: bold;">₹1699</div>
                             </div>
                             <div class="mobile-quantity">
                                 <button type="button" class="quantity-btn" onclick="changeOrderQuantity(this, -1)">−</button>
